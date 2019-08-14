@@ -1,0 +1,24 @@
+label.btn {
+	input {
+		display: none !important;
+	}
+}
+
+.btn {
+	@include flex(center,center,nowrap,inline-flex);
+	vertical-align: middle;
+	border: 1px solid transparent;
+	outline: none;
+	text-align: center;
+	cursor: pointer;
+	@include transition;
+	&--white {
+		border-color: $white;
+		background: $white;
+		color: $lBlack;
+		&:hover {
+			background: $lBlack;
+			color: $white;
+		}
+	}
+}

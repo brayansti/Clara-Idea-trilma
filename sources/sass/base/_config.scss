@@ -1,0 +1,31 @@
+/* VARIABLES */
+
+// Colors
+
+$black: #000;
+$lBlack: #292929;
+
+$white: #FFF;
+
+$txtGray: #dfdfdf; 
+
+// Global Font
+$fontFamily: arial, sans-serif;
+$baseFont: 16;
+
+// Loader
+$bgLoader: $black;
+$colorLoader: $white;
+
+$widthLoader: 100px;
+
+// -- to animation
+$colorLoader1: red;
+$colorLoader2: green;
+$colorLoader3: purple;
+$colorLoader4: yellow;
+
+// Modal
+$bgModal: $black;
+$maxWModal: 500px;
+$minHModal: 400px;

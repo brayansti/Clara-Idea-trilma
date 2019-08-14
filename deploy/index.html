@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>    
+<body>
+    <main class="mainContent">
+        <header class="mainHeader">
+            <article class="container-fluid">
+                <div class="row">
+                    <section class="col-md-3">
+                        mainHeader__users
+                    </section>
+                    <section class="col-md-6">
+                        <h1>
+                            Logo
+                        </h1>
+                    </section>
+                    <section class="col-md-3">
+                        mainHeader__users
+                    </section>
+                </div>
+            </article>
+        </header>
+        <article class="gameboard">
+            <div class="gameboard__steps">
+                <div data-toggle="modal" data-target="#cardsModal" class="gameboard__step"></div>
+                <div data-toggle="modal" data-target="#cardsModal" class="gameboard__step"></div>
+                <div data-toggle="modal" data-target="#cardsModal" class="gameboard__step"></div>
+                <div data-toggle="modal" data-target="#cardsModal" class="gameboard__step"></div>
+                <div data-toggle="modal" data-target="#cardsModal" class="gameboard__step"></div>
+            </div>
+
+            <div id="cardsModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <article class="containerFluid">
+                            <!-- Slider Cards -->
+                            <div class="swiper-container cardsSwiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide cardsSwiper__slide">
+                                        <div class="cardsSwiper__slide_content">
+                                            <h2 class="cardsSwiper__title">
+                                                Title
+                                            </h2>
+                                            <h3 class="cardsSwiper__subtitle">
+                                                Sub title
+                                            </h3>
+                                            <div class="cardsSwiper__descripcion">
+                                                <p>
+                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                </p>
+                                                <img src="https://picsum.photos/id/1011/600/300" alt="1011">
+                                                <p>
+                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END Slide -->
+                                    <!-- Slides -->
+                                    <div class="swiper-slide cardsSwiper__slide">
+                                        <div class="cardsSwiper__slide_content">
+                                            <h2 class="cardsSwiper__title">
+                                                Title
+                                            </h2>
+                                            <h3 class="cardsSwiper__subtitle">
+                                                Sub title
+                                            </h3>
+                                            <div class="cardsSwiper__descripcion">
+                                                <p>
+                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                </p>
+                                                <img src="https://picsum.photos/id/1011/600/300" alt="1011">
+                                                <p>
+                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END Slide -->
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <!-- END Slider Cards -->
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+
+        </article>
+        <footer>
+        </footer>
+    </main>
+    <!-- ↓↓ bootstrap ↓↓ -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- ↑↑ bootstrap ↑↑ -->
+
+    <!-- ↓↓ swiper ↓↓ -->
+    <link rel="stylesheet" href="../node_modules/swiper/dist/css/swiper.min.css">
+    <script src="../node_modules/swiper/dist/js/swiper.min.js"></script>
+    <!-- ↑↑ swiper ↑↑ -->
+
+    <script type="text/javascript">
+        // ↓ run "gulp" to activate this ↓
+        if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent))
+            document.write('<script src="./assets/js/ie.min.js"><\/script>');
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

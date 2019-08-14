@@ -1,0 +1,39 @@
+// <section class="modal" data-modal="video-1">
+//     <div class="modal__container">
+//         <h2 class="modal__title"></h2>
+//         <p class="modal__desc"></p>
+//     </div>
+// </section>
+
+.modal {
+	@include flex;
+	width: 100vw;
+	height: 100vh;
+	background: rgba($black,.9);
+	position: fixed;
+	top: 0;
+	left: 0;
+	@include transition;
+	z-index: 3000;
+	&__container {
+		@include flex(center,center,wrap);
+		width: 100%;
+		max-width: $maxWModal;
+		height: auto;
+		min-height: $minHModal;
+		text-align: center;
+	}
+	&__title {
+		width: 100%;
+		max-width: 300px;
+		margin-bottom: 40px;
+		@include fontSize(15);
+		text-align: center;
+		font-weight: normal;
+		color: $white;
+		line-height: 20px;
+	}
+	&__desc {
+		@include fontSize(15);
+	}
+}

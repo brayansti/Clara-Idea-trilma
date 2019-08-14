@@ -1,0 +1,46 @@
+#Carpeta node_modules#
+node_modules/
+package-lock.json
+resources/
+deploy/vendor/
+deploy/.env
+composer.lock
+deploy/assets/css/*
+deploy/assets/js/*
+
+# OS generated files #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+#Prepros
+prepros.cfg
+
+
+
+#SoloParaProyectoComprimidos
+*.zip
+*.rar

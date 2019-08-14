@@ -1,0 +1,32 @@
+{
+  "name": "babel_sass",
+  "version": "1.0.0",
+  "description": "Gulp generator",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brayan Camargo",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/register": "^7.4.0",
+    "autoprefixer": "^9.5.1",
+    "del": "^4.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.3",
+    "npm": "^6.10.3",
+    "swiper": "^4.5.0"
+  }
+}
