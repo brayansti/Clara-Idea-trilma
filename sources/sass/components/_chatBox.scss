@@ -1,4 +1,5 @@
 .chatbox{
+    position: relative;
     width: 100%;
     padding: 20px;
     margin: 0 auto;
@@ -6,14 +7,23 @@
     color: rgba($black, 0.7);
     background-color: $white;
     max-width: calc(100% - 40px);
-    border-radius: 10px;
+    border-radius: 5px 5px 0 0;
+    height: 250px;
+    overflow: auto;
     &__session{
-        
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba($black, 0.3);
+        &:last-of-type{
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
     }
     &__header{
         font-size: 14px;
         font-weight: bold;
         text-align: center;
+        padding-top: 20px;
+        padding-bottom: 5px;
     }
     &__messages{
         &_message{
@@ -22,7 +32,7 @@
             &::before{
                 content: "";
                 top: 0;
-                right: calc(100% - 105px);
+                right: calc(100% - 115px);
                 position: absolute;
                 border-style: solid;
                 border-width: 17px 25px 0 25px;
@@ -31,7 +41,7 @@
             &-own{
                 &::before{
                     right: initial;
-                    left: calc(100% - 105px);
+                    left: calc(100% - 115px);
                 }
                 .chatbox__messages_content{
                     margin-left: auto;
@@ -47,7 +57,7 @@
                 max-width: 50px;
                 min-height: 50px;
                 max-height: 50px;
-                margin: 0 10px;
+                margin: 0 15px;
                 img{
                     width: 100%;
                     height: 100%;
@@ -61,8 +71,30 @@
                 color: $white;
                 font-size: 14px;
                 line-height: 1.3;
+                border-radius: 5px;
                 background-color: #404299;
             }
+        }
+    }
+    &__textarea{
+        left: 0;
+        width: 100%;
+        .sendMessage{
+            width: 100%;
+            display: flex;
+        }
+        input{
+            width: 100%;
+            outline: none;
+            display: block;
+            padding: 0 15px;
+            font-weight: 200;
+            margin-right: 5px;
+            border-radius: 5px;
+            border: 1px solid rgba($black, 0.3);
+        }
+        .btn{
+
         }
     }
 }

@@ -1,3 +1,10 @@
+// Settings:
+$card-width : 140px;
+$card-height : 140px;
+$colums-gap: 40px; // auto-fill;
+$colums-grid: 4; // auto-fill;
+$way-width: 60px;
+
 .gameboard{
     padding: 20px;
     &__column{
@@ -11,25 +18,52 @@
         margin: 0 auto;
         flex-wrap: wrap;
         display: grid;
-        grid-gap: 15px;
-        justify-content: space-between;
-        grid-template-rows: repeat(auto-fill, minmax(100px, 100px));
-        grid-template-columns: repeat(auto-fill, minmax(100px, 100px));
+        grid-gap: $colums-gap;
+        justify-content: center;
+        grid-template-columns: repeat($colums-grid, minmax($card-width, $card-height));
     }
     &__step{
         cursor: pointer;
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
+        width: $card-width;
+        position: relative;
+        height: $card-height;
         background-color: #e6bd48;
-        border: 3px solid #e6a93e;
+        box-shadow: 0px 0px 0px 3px #e6a93e;
+        &::before{
+            content: "";
+            left: -$colums-gap;
+            top: 0;
+            bottom: 0;
+            height: $way-width;
+            margin-top: auto;
+            position: absolute;
+            margin-bottom: auto;
+            width: calc(100% + #{$colums-gap + $colums-gap});
+            background-color: #e6a93e;
+            z-index: -1;
+        }
+        // ↓↓↓ The first column item ↓↓↓
+        &:nth-of-type( #{$colums-grid}n ){
+            // background-color: blue;
+        }
+        // ↓↓↓ The last column item ↓↓↓
+        &:nth-of-type( #{$colums-grid}n +1 ){
+            // background-color: purple;
+        }
+
+        &:nth-of-type( #{($colums-grid)*2}n - #{$colums-grid} ){
+            background-color: purple;
+        }
+        &:nth-of-type( #{($colums-grid)*2}n - #{$colums-grid - 1} ){
+            background-color: tomato;
+        }
     }
 }
 .cardsSwiper{
     color: $black;
     &__slide{
         &_content{
-            padding: 20px;
+            // padding: 20px;
         }
     }
     &__title{

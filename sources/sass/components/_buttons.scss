@@ -13,12 +13,25 @@ label.btn {
 	cursor: pointer;
 	@include transition;
 	&--white {
-		border-color: $white;
-		background: $white;
 		color: $lBlack;
+		background: $white;
+		border-color: $white;
 		&:hover {
 			background: $lBlack;
 			color: $white;
 		}
+	}
+	&--yellow {
+		color: $white;
+		background: #e6a93e;
+		border-color: #e6a93e;
+		&:hover {
+			background: #e6bd48;
+		}
+	}
+	&--circle {
+		width: 40px;
+		height: 40px;;
+		border-radius: 50%;
 	}
 }
