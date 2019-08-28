@@ -1,34 +1,24 @@
 // Settings:
-$card-width : 140px;
-$card-height : 140px;
-$colums-gap: 40px; // auto-fill;
-$colums-grid: 4; // auto-fill;
-$way-width: 60px;
+$card-width : 200px;
+$card-height : 200px;
+$colums-gap: 20px; // auto-fill;
+$way-width: 40px;
 
 .gameboard{
+    --colums-grid: 4;
     padding: 20px;
     &__column{
         display: flex;
         justify-content: center;
     }
-    &__steps{
-        width: 100%;
-        max-width: 980px;
-        display: flex;
-        margin: 0 auto;
-        flex-wrap: wrap;
-        display: grid;
-        grid-gap: $colums-gap;
-        justify-content: center;
-        grid-template-columns: repeat($colums-grid, minmax($card-width, $card-height));
-    }
     &__step{
+        border-radius: 50%;
         cursor: pointer;
         width: $card-width;
         position: relative;
         height: $card-height;
-        background-color: #e6bd48;
-        box-shadow: 0px 0px 0px 3px #e6a93e;
+        background-color: #0231b8;
+        box-shadow: 0px 0px 0px 3px #2ec7c5;
         &::before{
             content: "";
             left: -$colums-gap;
@@ -42,20 +32,109 @@ $way-width: 60px;
             background-color: #e6a93e;
             z-index: -1;
         }
-        // ↓↓↓ The first column item ↓↓↓
-        &:nth-of-type( #{$colums-grid}n ){
-            // background-color: blue;
-        }
-        // ↓↓↓ The last column item ↓↓↓
-        &:nth-of-type( #{$colums-grid}n +1 ){
-            // background-color: purple;
+
+        // // ↓↓↓ last of row ↓↓↓
+        &:last-of-type{
+            &::after{
+                z-index: -1;
+                content: "";
+                width: $way-width;
+                position: absolute;
+                background-color: #e6a93e;
+                top: ($card-height - $way-width)/2;
+                height: calc(100% + #{ ($colums-gap + (($card-height - $way-width)/2) + $way-width) - (($card-height - $way-width)/2) });
+            }
         }
 
-        &:nth-of-type( #{($colums-grid)*2}n - #{$colums-grid} ){
-            background-color: purple;
+        // NNNNNNNNNNNNNNNNNN
+        // NNNNNNNNNNNNNNNNNN
+        // NNNNNNNNNNNNNNNNNN
+
+        // // ↓↓↓ last and firsf of row ↓↓↓
+
+        // &:nth-of-type( #{($colums-grid)*2}n - #{$colums-grid} ),
+        // &:nth-of-type( #{($colums-grid)*2}n - #{$colums-grid - 1} ){
+        //     &::after{
+        //         z-index: -1;
+        //         content: "";
+        //         width: $way-width;
+        //         position: absolute;
+        //         background-color: #e6a93e;                
+        //         top: ($card-height - $way-width)/2;
+        //         height: calc(100% + #{ ($colums-gap + (($card-height - $way-width)/2) + $way-width) - (($card-height - $way-width)/2) });
+        //     }
+        // }
+
+        // // ↓↓↓ last of row ↓↓↓
+        // &:nth-of-type( #{($colums-grid)*2}n - #{$colums-grid} ){
+        //     background-color: purple;
+        //     &::after{
+        //         border-radius: 0 40px 40px 0;
+        //         left: calc(100% + #{$colums-gap});
+        //     }
+        // }
+
+        // // ↓↓↓ First of row ↓↓↓ 
+        // &:nth-of-type( #{($colums-grid)*2}n - #{$colums-grid - 1} ){
+        //     background-color: tomato;
+        //     &::after{
+        //         border-radius: 40px 0 0 40px;
+        //         right: calc(100% + #{$colums-gap});
+        //     }
+        // }
+
+        // NNNNNNNNNNNNNNNNNN
+        // NNNNNNNNNNNNNNNNNN
+        // NNNNNNNNNNNNNNNNNN
+        &:last-of-type{
+            &::after{
+                // content: none;
+            }
         }
-        &:nth-of-type( #{($colums-grid)*2}n - #{$colums-grid - 1} ){
-            background-color: tomato;
+    }
+    &__steps{
+        width: 100%;
+        margin: 0 auto;
+        max-width: 980px;
+        &_row{
+            display: grid;
+            grid-gap: $colums-gap;
+            justify-content: center;
+            margin-bottom: $colums-gap;
+            grid-template-columns: repeat( var(--colums-grid), minmax($card-width, $card-height));
+
+            &:nth-of-type(odd){
+                // background-color: red;
+                .gameboard__step{
+                    &:last-of-type{
+                        &::after{
+                            border-radius: 0 40px 40px 0;
+                            left: calc(100% + #{$colums-gap});
+                        }
+                    }
+                }
+            }
+            &:nth-of-type(even){
+                direction: rtl;
+                .gameboard__step{
+                    &:last-of-type{
+                        &::after{
+                            border-radius: 40px 0 0 40px;
+                            right: calc(100% + #{$colums-gap});
+                        }
+                    }
+                }
+            }
+            &:last-of-type{
+                .gameboard__step{
+                    &:last-of-type{
+                        &::after{
+                            display: none;;
+                        }
+                    }
+                }
+            }
+            
         }
     }
 }

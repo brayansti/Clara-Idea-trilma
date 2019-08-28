@@ -29,6 +29,15 @@ label.btn {
 			background: #e6bd48;
 		}
 	}
+	&--red {
+		color: $white;
+		background: #fa3d5a;
+		border-color: transparent;
+		&:hover {
+			color: #fa3d5a;
+			background: $white;
+		}
+	}
 	&--circle {
 		width: 40px;
 		height: 40px;;

@@ -27,6 +27,36 @@ utilidadesJS.orietacionImagenes = function (selector, classHorizontal, classVert
 	}
 }
 
+var width_viewportView = window.innerWidth;
+
+utilidadesJS.isMobile = () => {
+	var retorno;
+	if (width_viewportView <= 768) {
+		// Movil
+		retorno = true
+		return retorno
+	}
+	else{
+		// Desktop
+		retorno = false
+		return retorno
+	}
+}
+
+utilidadesJS.isTablet = () => {
+	var retorno;
+	if (width_viewportView <= 992) {
+		// Movil
+		retorno = true
+		return retorno
+	}
+	else{
+		// Desktop
+		retorno = false
+		return retorno
+	}
+}
+
 // function accordion(){
 // 	// ACCORDION
 // 	if ($(".accordion").length > 0) {
