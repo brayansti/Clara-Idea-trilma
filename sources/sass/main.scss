@@ -9,12 +9,12 @@
 
 /* UTILITIES */
 @import 'utilities/mixins';
-@import 'utilities/animations';
+// @import 'utilities/animations';
 @import 'utilities/states';
 
 
 /* LIBRARIES */
-// @import 'libraries/animateCSS';
+@import 'libraries/animateCSS';
 // @import 'libraries/grid-bootstrap';
 
 /* COMPONENTS */
