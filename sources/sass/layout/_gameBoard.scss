@@ -142,20 +142,28 @@ $way-width: 40px;
     color: $black;
     &__slide{
         &_content{
-            // padding: 20px;
+            padding: 20px 20px 40px 20px;
         }
     }
     &__title{
+        text-align: center;
         @include fontSize(30);
     }
     &__subtitle{
+        margin-bottom: 10px;
         @include fontSize(18);
     }
     &__descripcion{
         @include fontSize(14);
         p{
+            display: flex;
             margin-top: 10px;
             margin-bottom: 10px;
+            .icon{
+                color: #280f68;
+                margin-right: 15px;
+                @include fontSize(35);
+            }
         }
         img{
             width: 100%;

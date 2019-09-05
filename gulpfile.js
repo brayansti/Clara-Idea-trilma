@@ -17,9 +17,10 @@ var paths = {
 	},
 	scripts: {
 		src: [
-			'sources/js/utilidades.js',
-			'sources/js/script.js',
 			'sources/js/front.js',
+			'sources/js/utilidades.js',
+			'sources/js/modals.js',
+			'sources/js/gameBoard.js',
 		],
 		src_IE: [
 			BABEL_POLYFILL

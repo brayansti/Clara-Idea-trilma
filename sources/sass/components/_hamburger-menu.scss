@@ -8,12 +8,11 @@ $bar-color: rgba(255, 255, 255, 1);
 	display: none;
 	width: $bar-width;
 	height: $bar-height + $bar-spacing*2;
-	position: absolute;
-	top: 1.5rem;
-	right: 1.5rem;
 	cursor: pointer;
 	z-index: 2;
-	@media #{$media-movil}{
+	margin: 0 auto;
+	margin-top: 2rem;
+	@media #{$mediaMobile}{
 		display: block;
 	}
 	.bar,

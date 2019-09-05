@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
+        <title>Trilma Clara</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
         <link rel="stylesheet" href="assets/css/main.css">
@@ -14,16 +14,47 @@
         <header class="mainHeader">
             <article class="container-fluid">
                 <div class="row">
-                    <section class="col-md-3">
-                        mainHeader__users
+                    <section class="col-3 align-items-center"></section>
+                    <section class="col-6 align-items-center">
+                        <img class="mainHeader__logoTrilma mainHeader__image pt20" src="./img/logos/logoTrilmaClara.svg" alt="Trilma Clara">
                     </section>
-                    <section class="col-md-6">
-                        <h1>
-                            Logo
-                        </h1>
-                    </section>
-                    <section class="col-md-3">
-                        mainHeader__users
+                    <section class="col-3 align-items-center">
+                        <div class="hamburger-menu">
+                            <div class="bar"></div>
+                        </div>
+                        <img class="mainHeader__logoClara mainHeader__image pt20" src="./img/logos/logoClaraIdea.svg" alt="Trilma Clara">
+                        <article class="mainHeader__nav hide">
+                            <section class="mainHeader__nav_content">
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <a href="">
+                                                <span class="btn btn--circle btn--circle-big btn--red" href="">
+                                                    <i class="fas fa-comment"></i>
+                                                </span>
+                                                User
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="btn btn--circle btn--circle-big btn--red" href="">
+                                                    <i class="fas fa-comment"></i>
+                                                </span>
+                                                User
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="btn btn--circle btn--circle-big btn--red" href="">
+                                                    <i class="fas fa-comment"></i>
+                                                </span>
+                                                User
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </section>
+                        </article>
                     </section>
                 </div>
             </article>
@@ -85,9 +116,6 @@
                     11
                 </div>
                 <!-- END Step -->
-
-                <!-- HERE the BACKUP -->
-
             </div>
 
             <div id="cardsModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -102,22 +130,32 @@
                                     <div class="swiper-slide cardsSwiper__slide">
                                         <div class="cardsSwiper__slide_content">
                                             <h2 class="cardsSwiper__title">
-                                                ESCOPO
+                                                FORA DA CAIXA 1
                                             </h2>
-                                            <h3 class="cardsSwiper__subtitle">
-                                                Sub title
-                                            </h3>
                                             <div class="cardsSwiper__descripcion">
                                                 <p>
-                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                    <span class="icon icon--circle">
+                                                        <i class="fas fa-user"></i>
+                                                    </span>
+                                                    Hora de ir bem além do óbvio e praticar técnicas de pensamento lateral. Pode parecer loucura, mas faz toda a diferença para a inovação.
                                                 </p>
-                                                <img src="https://picsum.photos/id/1011/600/300" alt="1011">
+                                                <h3 class="cardsSwiper__subtitle">
+                                                    EXERCÍCIO 1
+                                                </h3>
                                                 <p>
-                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                    Vamos buscar inspiração em outros lugares.
+                                                </p>
+                                                <p>
+                                                    <span class="icon icon--circle">
+                                                        <i class="fas fa-user"></i>
+                                                    </span>
+                                                    Hora de ir bem além do óbvio e praticar técnicas de pensamento lateral. Pode parecer loucura, mas faz toda a diferença para a inovação.
+                                                </p>
+                                                <p>
+                                                    <span class="icon icon--circle">
+                                                        <i class="fas fa-user"></i>
+                                                    </span>
+                                                    Hora de ir bem além do óbvio e praticar técnicas de pensamento lateral. Pode parecer loucura, mas faz toda a diferença para a inovação.
                                                 </p>
                                             </div>
                                         </div>
@@ -133,13 +171,11 @@
                                                 Sub title
                                             </h3>
                                             <div class="cardsSwiper__descripcion">
-                                                <p>
-                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                                </p>
                                                 <img src="https://picsum.photos/id/1011/600/300" alt="1011">
                                                 <p>
+                                                    <span class="icon icon--circle">
+                                                        <i class="fas fa-users"></i>
+                                                    </span>
                                                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                                                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                                                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -162,8 +198,9 @@
         </article>
         <footer class="mainFooter">
             <div class="mainFooter__toggleChat">
-                <button class="btn btn--circle btn--circle-big btn--red">
+                <button class="btn btn--circle btn--circle-big btn--red" id="toggleChatEvent">
                     <i class="fas fa-comment"></i>
+                    <i class="hidden fas fa-times"></i>
                 </button>
             </div>
             <article class="chatbox">

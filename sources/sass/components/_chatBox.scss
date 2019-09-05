@@ -1,16 +1,30 @@
 .chatbox{
-    display: none;
     position: relative;
-    background: linear-gradient(-45deg, #183850 0, #183850 25%, #192C46 50%, #22254C 75%, #22254C 100%);
-    padding: 20px;
     margin: 0 auto;
     color: rgba($black, 0.7);
     background-color: $white;
     max-width: calc(100% - 40px);
     border-radius: 5px 5px 0 0;
+    background: linear-gradient(-45deg, #183850 0, #183850 25%, #192C46 50%, #22254C 75%, #22254C 100%);
+    @include transition();
+    height: 0;
+    padding: 0 20px;
+    @media #{$mediaMobile}{
+    	max-width: 100%;
+    }
+    &.active{
+        height: 300px;
+        @media #{$mediaMobile}{
+            height: calc(100vh - 150px);
+        }
+    }
     &__chatContent{
-        height: 250px;
+        padding: 20px;
         overflow: auto;
+        height: calc( 100% -  60px);
+        @media #{$mediaMobile}{
+            padding: 0;
+        }
     }
     &__session{
         padding-bottom: 10px;
@@ -22,7 +36,7 @@
     }
     &__header{
         color: $white;
-        font-size: 16px;
+        @include fontSize(16);
         text-align: center;
         padding-top: 20px;
         padding-bottom: 5px;
@@ -71,7 +85,7 @@
             &_text{
                 padding: 15px;
                 color: #0AD5C1;
-                font-size: 16px;
+                @include fontSize(16);
                 line-height: 1.4;
                 border-radius: 5px;
                 // background-color: #404299;
