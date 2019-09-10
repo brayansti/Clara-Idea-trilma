@@ -7,9 +7,13 @@
         <title>Trilma Clara</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+        <link rel="stylesheet" href="library/dropzone/dropzone.min.css">
+        <!-- <link rel="stylesheet" href="library/dropzone/basic.min.css"> -->
+        <link rel="stylesheet" href="library/swiper/dist/css/swiper.min.css">
         <link rel="stylesheet" href="assets/css/main.css">
     </head>    
 <body>
+
     <main class="mainContent">
         <header class="mainHeader">
             <article class="container-fluid">
@@ -30,7 +34,7 @@
                                         <li>
                                             <a href="">
                                                 <span class="btn btn--circle btn--circle-big btn--red" href="">
-                                                    <i class="fas fa-comment"></i>
+                                                    <i class="fas fa-user"></i>
                                                 </span>
                                                 User
                                             </a>
@@ -38,17 +42,17 @@
                                         <li>
                                             <a href="">
                                                 <span class="btn btn--circle btn--circle-big btn--red" href="">
-                                                    <i class="fas fa-comment"></i>
+                                                    <i class="fas fa-cog"></i>
                                                 </span>
-                                                User
+                                                Settings
                                             </a>
                                         </li>
                                         <li>
                                             <a href="">
                                                 <span class="btn btn--circle btn--circle-big btn--red" href="">
-                                                    <i class="fas fa-comment"></i>
+                                                    <i class="fas fa-home"></i>
                                                 </span>
-                                                User
+                                                Map
                                             </a>
                                         </li>
                                     </ul>
@@ -128,34 +132,65 @@
                                 <div class="swiper-wrapper">
                                     <!-- Slides -->
                                     <div class="swiper-slide cardsSwiper__slide">
+                                        <h2 class="cardsSwiper__title">
+                                            Fora da caixa 1
+                                        </h2>
+                                        <div class="cardsSwiper__slide_content">
+                                            <h3 class="cardsSwiper__subtitle">
+                                                Compartilhem e continuem a ter ideias.
+                                            </h3>
+                                            <div class="cardsSwiper__descripcion">
+                                                <!-- Drop Zone example -->
+                                                <div class="dropzone"></div>
+                                                <!-- Drop Zone example -->
+
+                                                <form class="form form--modal">
+
+                                                    <p>
+                                                        <span class="icon icon--circle">
+                                                            <i class="fas fa-user"></i>
+                                                        </span>
+                                                        Hora de ir bem além do óbvio e praticar técnicas de pensamento lateral. Pode parecer loucura, mas faz toda a diferença para a inovação.
+                                                    </p>
+                                                    <div class="placeholder mt10">
+                                                        <input placeholder="Digite sua resposta" required type="text">
+                                                        <label></label>
+                                                    </div>
+                                                    <div class="placeholder mt10">
+                                                        <input placeholder="Digite sua resposta" required type="text">
+                                                        <label></label>
+                                                    </div>
+                                                    <p>
+                                                        <br>
+                                                        Pode parecer loucura
+                                                    </p>
+                                                    <div class="placeholder">
+                                                        <textarea placeholder="Digite sua resposta" required rows="3"></textarea>
+                                                        <label></label>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END Slide -->
+                                    <!-- Slides -->
+                                    <div class="swiper-slide cardsSwiper__slide">
                                         <div class="cardsSwiper__slide_content">
                                             <h2 class="cardsSwiper__title">
-                                                FORA DA CAIXA 1
+                                                PROPOSTAS
                                             </h2>
+                                            <h3 class="cardsSwiper__subtitle">
+                                                Sub title
+                                            </h3>
                                             <div class="cardsSwiper__descripcion">
+                                                <img src="https://picsum.photos/id/1011/600/300" alt="1011">
                                                 <p>
                                                     <span class="icon icon--circle">
-                                                        <i class="fas fa-user"></i>
+                                                        <i class="fas fa-users"></i>
                                                     </span>
-                                                    Hora de ir bem além do óbvio e praticar técnicas de pensamento lateral. Pode parecer loucura, mas faz toda a diferença para a inovação.
-                                                </p>
-                                                <h3 class="cardsSwiper__subtitle">
-                                                    EXERCÍCIO 1
-                                                </h3>
-                                                <p>
-                                                    Vamos buscar inspiração em outros lugares.
-                                                </p>
-                                                <p>
-                                                    <span class="icon icon--circle">
-                                                        <i class="fas fa-user"></i>
-                                                    </span>
-                                                    Hora de ir bem além do óbvio e praticar técnicas de pensamento lateral. Pode parecer loucura, mas faz toda a diferença para a inovação.
-                                                </p>
-                                                <p>
-                                                    <span class="icon icon--circle">
-                                                        <i class="fas fa-user"></i>
-                                                    </span>
-                                                    Hora de ir bem além do óbvio e praticar técnicas de pensamento lateral. Pode parecer loucura, mas faz toda a diferença para a inovação.
+                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                                                 </p>
                                             </div>
                                         </div>
@@ -273,7 +308,7 @@
                     <!-- END Chat Session -->
                 </div>
                 <div class="chatbox__textarea">
-                    <form class="sendMessage">
+                    <form class="sendMessage" class="dropzone">
                         <input type="text">
                         <button class="btn btn--yellow btn--circle">
                             <i class="fas fa-paper-plane"></i>
@@ -289,8 +324,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <!-- ↑↑ bootstrap ↑↑ -->
 
+    <!-- ↓↓ Drop Zone ↓↓ -->
+    <script src="library/dropzone/dropzone.js"></script>
+    <!-- ↑↑ Drop Zone ↑↑ -->
+
     <!-- ↓↓ swiper ↓↓ -->
-    <link rel="stylesheet" href="library/swiper/dist/css/swiper.min.css">
     <script src="library/swiper/dist/js/swiper.min.js"></script>
     <!-- ↑↑ swiper ↑↑ -->
 

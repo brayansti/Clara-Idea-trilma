@@ -1,0 +1,19 @@
+.dropzone{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 2px dashed #3b16b3;
+    background-color: rgba($black , 0.04);
+    .dz-message{
+        text-align: center;
+        span{
+            display: block;
+            @include fontSize(18);
+            .fas{
+                color: #9c9c9c;
+                margin-top: 5px;
+                @include fontSize(70);
+            }
+        }
+    }
+}

@@ -86,3 +86,12 @@ const chatScrollDown = () =>{
     let chatBox = document.querySelector('.chatbox__chatContent');
     chatBox.scrollTop = chatBox.scrollHeight
 }
+
+const remainingTime = (time) =>{
+    let counterTime = 0;
+    setInterval( () => {
+        // console.log(`${time} = ${counterTime}`);
+        counterTime ++;
+    }, time);
+}
+remainingTime(1000);

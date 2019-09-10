@@ -146,15 +146,19 @@ $way-width: 40px;
         }
     }
     &__title{
+        color: $white;
+        font-weight: 300;
         text-align: center;
+        padding: 15px 10px;
         @include fontSize(30);
+        background: linear-gradient(to right, #b000a9 0%, #8e18c4 50%, #68178f 100%);
     }
     &__subtitle{
         margin-bottom: 10px;
         @include fontSize(18);
     }
     &__descripcion{
-        @include fontSize(14);
+        @include fontSize(15);
         p{
             display: flex;
             margin-top: 10px;

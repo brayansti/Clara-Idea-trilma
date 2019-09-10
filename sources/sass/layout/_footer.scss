@@ -4,7 +4,7 @@
     width: 100%;
     position: fixed;
     &__toggleChat{
-        padding: 40px;
+        padding: 20px;
         display: flex;
         justify-content: flex-end;
         @media #{$mediaMobile}{
