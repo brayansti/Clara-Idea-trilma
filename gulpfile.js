@@ -20,6 +20,7 @@ var paths = {
 			'sources/js/front.js',
 			'sources/js/utilidades.js',
 			'sources/js/modals.js',
+			'sources/js/chronometer.js',
 			'sources/js/gameBoard.js',
 		],
 		src_IE: [

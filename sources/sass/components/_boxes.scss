@@ -4,7 +4,12 @@
     border-radius: 10px;
     border: 2px dashed #3b16b3;
     background-color: rgba($black , 0.04);
+    @include transition();
+    &.dz-drag-hover{
+        border-color: rgba($black, 0.5)
+    }
     .dz-message{
+        @include transition();
         text-align: center;
         span{
             display: block;

@@ -13,7 +13,7 @@ const toogleMenu = ()=>{
 }
 
 Dropzone.autoDiscover = false;
-const dropZone = () =>{	   
+const dropZone = () =>{
 	
 	var dropzoneOptions = {
 		url: "index.html",
@@ -41,7 +41,7 @@ const dropZone = () =>{
 
 	// let newDropzone = new Dropzone(".dropzone", dropzoneOptions );
 
-	let selectDropzones = document.querySelectorAll('.dropzone')
+	let selectDropzones = document.querySelectorAll('.dropzone');
 
 	let newDropzone;
 	

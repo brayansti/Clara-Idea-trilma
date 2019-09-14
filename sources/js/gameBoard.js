@@ -87,11 +87,20 @@ const chatScrollDown = () =>{
     chatBox.scrollTop = chatBox.scrollHeight
 }
 
-const remainingTime = (time) =>{
-    let counterTime = 0;
-    setInterval( () => {
-        // console.log(`${time} = ${counterTime}`);
-        counterTime ++;
-    }, time);
+class Chronometer {
+    constructor ( x = 0, y = 0 ) {
+        this.x = x;
+        this.y = y;
+    }
 }
-remainingTime(1000);
+
+const remainingTime = (time) =>{
+    setInterval( () => {
+        // console.log(`${time}`);
+        if( time <= 0 ){
+            // console.log('Stop');
+        };
+        time --;
+    }, 1000);
+}
+remainingTime(10);
