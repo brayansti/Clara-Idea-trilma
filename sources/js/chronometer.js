@@ -1,38 +1,33 @@
-import { resolve } from "path";
-
+const privates = new WeakMap();
 class Chronometer {
-	constructor( element , endCallback ){
+	constructor( element , callback ){
 		this.element = document.querySelector(element);
-		this.endCallback = endCallback;
+		this.callback = callback;
 		this.state = 0 // 0:Stop / 1:Running
 		this.remainingTime;
 		this.counterTime;
 	}
 	timeInterval(){
-		this.counterTime = setInterval( () => this.countDown() , 1000);
+		this.counterTime = setInterval(() => {
+			this.countDown().then( ()=>{
+				this.callback();
+				clearInterval( this.counterTime );
+			} )
+		}, 1000);
 	}
 	countDown(){
-		console.log(`State: ${this.state} Remaining: ${this.remainingTime}`);
-		if(this.remainingTime <= 0) this.stop();
-		this.remainingTime --;
-	}
-	setTime(time){
-		if(
-			time &&
-			time > 0 &&
-			typeof(time)=="number" &&
-			Number.isInteger(time)
-		){
-			if(this.state== 0) return 'Chronometer is not started.';
-			this.remainingTime = time;
-		} else{
-			return 'Invalid parameters.'
-		}
+		return new Promise( (resolve, reject)=>{
+			if(this.remainingTime <= 0){
+				resolve(true);
+			};
+			console.log(`State: ${this.state} Remaining: ${this.remainingTime}`);
+			this.element.innerText = `${this.remainingTime}`;
+			this.remainingTime --;
+		} )
 	}
 	stop(){
 		this.state = 0;
-		clearInterval( this.counterTime );
-		console.log('END');
+		this.remainingTime = 0;
 	}
 	start(time){
 		if(
@@ -41,8 +36,11 @@ class Chronometer {
 			typeof(time)=="number" &&
 			Number.isInteger(time)
 		) {
-			if(this.state== 1) return 'Chronometer is not over.';
+			// if(this.state== 1) return 'Chronometer is not over.';
+			clearInterval( this.counterTime );
 			this.state = 1;
+			this.element.innerText = time;
+			time = time -1;
 			this.remainingTime = time;
 			this.timeInterval();
 		} else{
@@ -52,44 +50,8 @@ class Chronometer {
 }
 
 // Ejecucion
-let cronometro = new Chronometer('.algo' , function(){
-	console.log('Finalizado');
+let cronometro = new Chronometer('.algo' , ()=>{
+	console.log('Terminado');
 });
 
-const users = [
-	{id: 0, name: 'Paula' , profesion:'Futbolista' },
-	{id: 1, name: 'Mario' , profesion:'Motorista' },
-	{id: 2, name: 'Rafael' , profesion:'Actor' },
-	{id: 3, name: 'Ana' , profesion:'Pescador' },
-]
-// console.log( users.filter( user => user.name=='Rafael' ) );
-
-const getUsers = (callback)=> {
-	callback( users );
-};
-const getUser = (id, callback)=> {
-	callback( users.filter( (user)=>user.id == id)[0] );
-};
-const getProfesion = (user, callback)=> {
-	callback( user.profesion );
-};
-
-const getUserPromise = ()=> {
-	return new Promise( (resolve , reject)=>{
-		console.log( resolve );
-		resolve();
-	} );
-}
-
-getUserPromise().then( (response) =>{
-	console.log(response);
-} )
-
-getUsers( (users) =>{
-	getUser( users[1].id , (user)=>{
-		console.log(user);
-		getProfesion(user , (profesion)=>{
-			console.log( profesion );
-		});
-	} );
-});
+cronometro.start(2);
