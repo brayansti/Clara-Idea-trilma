@@ -34,18 +34,27 @@ label.btn {
 		background: #fa3d5a;
 		border-color: transparent;
 		&:hover {
-			color: #fa3d5a;
-			background: $white;
+			color: $white;
+			background: #d0354d;
 		}
 	}
 	&--circle {
 		width: 40px;
 		height: 40px;;
 		border-radius: 50%;
+		font-weight: normal;
 		&-big{
 			width: 60px;
 			height: 60px;
 			@include fontSize(20);
+		}
+	}
+	&--square {
+		padding: 10px;
+		border-radius: 10px;
+		.far, .fas{
+			@include fontSize(25);
+			margin-right: 5px;
 		}
 	}
 }

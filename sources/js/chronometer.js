@@ -1,4 +1,3 @@
-const privates = new WeakMap();
 class Chronometer {
 	constructor( element , callback ){
 		this.element = document.querySelector(element);
@@ -10,15 +9,15 @@ class Chronometer {
 	timeInterval(){
 		this.counterTime = setInterval(() => {
 			this.countDown().then( ()=>{
-				this.callback();
 				clearInterval( this.counterTime );
+				this.callback(this);
 			} )
 		}, 1000);
 	}
 	countDown(){
 		return new Promise( (resolve, reject)=>{
 			if(this.remainingTime <= 0){
-				resolve(true);
+				resolve();
 			};
 			console.log(`State: ${this.state} Remaining: ${this.remainingTime}`);
 			this.element.innerText = `${this.remainingTime}`;
@@ -48,10 +47,3 @@ class Chronometer {
 		}
 	}
 }
-
-// Ejecucion
-let cronometro = new Chronometer('.algo' , ()=>{
-	console.log('Terminado');
-});
-
-cronometro.start(2);

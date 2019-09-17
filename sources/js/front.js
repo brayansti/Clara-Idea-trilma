@@ -51,3 +51,9 @@ const dropZone = () =>{
 		let newDropzone = new Dropzone(element, dropzoneOptions );
 	});
 }
+
+// New cronometro -> 
+let testTime = new Chronometer('#cronomether' , (clock)=>{
+	console.log(clock);
+	alert('END');
+});
