@@ -5,16 +5,6 @@ let chatStatus = 0;
 
 document.addEventListener('DOMContentLoaded' , ()=>{
     createGameBoard();
-
-    document.getElementById('toggleChatEvent').addEventListener('click' , ()=>{
-        !chatStatus ? openChat() : closeChat();
-    });
-
-    document.addEventListener('keyup' , (e)=>{
-        if( e.keyCode === 27 ){
-            closeChat();
-        }
-    })
 })
 
 
@@ -52,55 +42,3 @@ const createGameBoard = ()=>{
         counterRows++;
     }
 }
-
-const toggleChat = ()=>{
-    document.querySelector('.chatbox').classList.toggle('active');
-    let iconChat = document.querySelectorAll('#toggleChatEvent .fas');
-    iconChat.forEach(element => {
-        element.classList.toggle('hidden');
-    });
-    document.querySelector('.sendMessage input').focus();
-    chatScrollDown();
-}
-
-const closeChat = () => {
-    chatStatus = chatStatus == 0 ? 1 : 0;
-    document.querySelector('.chatbox').classList.remove('active');
-    let iconChat = document.querySelectorAll('#toggleChatEvent .fas');
-    iconChat[0].classList.remove('hidden');
-    iconChat[1].classList.add('hidden');
-    document.querySelector('.sendMessage input').blur();
-}
-
-const openChat = () => {
-    chatStatus = chatStatus == 0 ? 1 : 0;
-    document.querySelector('.chatbox').classList.add('active');
-    let iconChat = document.querySelectorAll('#toggleChatEvent .fas');
-    iconChat[0].classList.add('hidden');
-    iconChat[1].classList.remove('hidden');
-    document.querySelector('.sendMessage input').focus();
-    chatScrollDown();
-}
-
-const chatScrollDown = () =>{
-    let chatBox = document.querySelector('.chatbox__chatContent');
-    chatBox.scrollTop = chatBox.scrollHeight
-}
-
-class Chronometer {
-    constructor ( x = 0, y = 0 ) {
-        this.x = x;
-        this.y = y;
-    }
-}
-
-const remainingTime = (time) =>{
-    setInterval( () => {
-        // console.log(`${time}`);
-        if( time <= 0 ){
-            // console.log('Stop');
-        };
-        time --;
-    }, 1000);
-}
-remainingTime(10);

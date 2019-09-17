@@ -5,9 +5,10 @@ $( document ).ready( ()=>{
         counterModalcards ++;
         if( counterModalcards <= 1 ){
             swiperCards = new Swiper('.cardsSwiper' , {
-                slidesPerView: 'auto',
+                slidesPerView: 1,
                 dynamicBullets: true,
                 effect: 'coverflow',
+                touchRatio: 0,
                 coverflowEffect: {
                     rotate: 50,
                     stretch: 0,

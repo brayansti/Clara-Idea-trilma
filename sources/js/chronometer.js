@@ -16,15 +16,16 @@ class Chronometer {
 	}
 	countDown(){
 		return new Promise( (resolve, reject)=>{
+			this.element.innerText = `${this.remainingTime}`;
+			console.log(`State: ${this.state} Remaining: ${this.remainingTime}`);
 			if(this.remainingTime <= 0){
 				resolve();
 			};
-			console.log(`State: ${this.state} Remaining: ${this.remainingTime}`);
-			this.element.innerText = `${this.remainingTime}`;
 			this.remainingTime --;
 		} )
 	}
 	stop(){
+		this.element.innerText = `0`;
 		this.state = 0;
 		this.remainingTime = 0;
 	}
