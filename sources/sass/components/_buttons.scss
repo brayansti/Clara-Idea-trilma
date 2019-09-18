@@ -1,3 +1,11 @@
+.modal-dialog {
+	// Fixes a bug in chrome.
+	// When some element inside the modal has position:fixed, the transforms have a weird effect of miscalculating the element's position
+	-webkit-transform: none;
+	-ms-transform: none; // IE9 only
+	transform: none;
+}
+
 label.btn {
 	input {
 		display: none !important;

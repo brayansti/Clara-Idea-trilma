@@ -158,7 +158,8 @@ $way-width: 40px;
         @include fontSize(18);
     }
     &__descripcion{
-        @include fontSize(15);
+        @include fontSize(16);
+        color: rgba($black , 0.8);
         p{
             display: flex;
             margin-top: 10px;

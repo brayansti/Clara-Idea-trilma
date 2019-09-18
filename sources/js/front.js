@@ -104,8 +104,8 @@ let testTime = new Chronometer('#cronomether' , (clock)=>{
 });
 
 const cfd = new CanvasFreeDrawing.default({
-	elementId: 'cfd',
-	width: 500,
-	height: 500,
+	elementId: 'drawZone',
+	width: 300,
+	height: 300,
 	showWarnings: true,
 });

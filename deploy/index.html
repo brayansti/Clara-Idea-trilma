@@ -11,7 +11,7 @@
         <!-- <link rel="stylesheet" href="library/dropzone/basic.min.css"> -->
         <link rel="stylesheet" href="library/swiper/dist/css/swiper.min.css">
         <link rel="stylesheet" href="assets/css/main.css">
-    </head>    
+    </head>
 <body>
 
     
@@ -68,211 +68,60 @@
         <article class="gameboard">
             <div class="gameboard__steps">
                 <!-- NEW Step -->
-                <div data-toggle="modal" data-target="#cardsModal" class="gameboard__step">
+                <div data-micromodal-trigger="modal-1" class="gameboard__step">
                     1
                 </div>
                 <!-- END Step -->
                 <!-- NEW Step -->
-                <div data-toggle="modal" data-target="#cardsModal" class="gameboard__step">
+                <div data-micromodal-trigger="modal-1" class="gameboard__step">
                     2
                 </div>
                 <!-- END Step -->
                 <!-- NEW Step -->
-                <div data-toggle="modal" data-target="#cardsModal" class="gameboard__step">
+                <div data-micromodal-trigger="modal-1" class="gameboard__step">
                     3
                 </div>
                 <!-- END Step -->
                 <!-- NEW Step -->
-                <div data-toggle="modal" data-target="#cardsModal" class="gameboard__step">
+                <div data-micromodal-trigger="modal-1" class="gameboard__step">
                     4
                 </div>
                 <!-- END Step -->
                 <!-- NEW Step -->
-                <div data-toggle="modal" data-target="#cardsModal" class="gameboard__step">
+                <div data-micromodal-trigger="modal-1" class="gameboard__step">
                     5
                 </div>
                 <!-- END Step -->
                 <!-- NEW Step -->
-                <div data-toggle="modal" data-target="#cardsModal" class="gameboard__step">
+                <div data-micromodal-trigger="modal-1" class="gameboard__step">
                     6
                 </div>
                 <!-- END Step -->
                 <!-- NEW Step -->
-                <div data-toggle="modal" data-target="#cardsModal" class="gameboard__step">
+                <div data-micromodal-trigger="modal-1" class="gameboard__step">
                     7
                 </div>
                 <!-- END Step -->
                 <!-- NEW Step -->
-                <div data-toggle="modal" data-target="#cardsModal" class="gameboard__step">
+                <div data-micromodal-trigger="modal-1" class="gameboard__step">
                     8
                 </div>
                 <!-- END Step -->
                 <!-- NEW Step -->
-                <div data-toggle="modal" data-target="#cardsModal" class="gameboard__step">
+                <div data-micromodal-trigger="modal-1" class="gameboard__step">
                     9
                 </div>
                 <!-- END Step -->
                 <!-- NEW Step -->
-                <div data-toggle="modal" data-target="#cardsModal" class="gameboard__step">
+                <div data-micromodal-trigger="modal-1" class="gameboard__step">
                     10
                 </div>
                 <!-- END Step -->
                 <!-- NEW Step -->
-                <div data-toggle="modal" data-target="#cardsModal" class="gameboard__step">
+                <div data-micromodal-trigger="modal-1" class="gameboard__step">
                     11
                 </div>
                 <!-- END Step -->
-            </div>
-
-            <div id="cardsModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <article class="containerFluid">
-                            <!-- Slider Cards -->
-                            <div class="swiper-container cardsSwiper">
-                                <!-- Additional required wrapper -->
-                                <div class="swiper-wrapper">
-                                    <!-- New Slide -->
-                                    <div class="swiper-slide cardsSwiper__slide">
-                                        <h2 class="cardsSwiper__title">
-                                            Fora da caixa 1
-                                        </h2>
-                                        <div class="cardsSwiper__slide_content">
-                                            <h3 class="cardsSwiper__subtitle">
-                                                Compartilhem e continuem a ter ideias.
-                                            </h3>
-                                            <div class="cardsSwiper__descripcion">
-                                                <div>
-                                                    <div id="canvas-container"><canvas id="cfd"></canvas></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- END Slide -->
-                                    <!-- New Slide -->
-                                    <div class="swiper-slide cardsSwiper__slide">
-                                        <h2 class="cardsSwiper__title">
-                                            Fora da caixa 1
-                                        </h2>
-                                        <div class="cardsSwiper__slide_content">
-                                            <h3 class="cardsSwiper__subtitle">
-                                                Compartilhem e continuem a ter ideias.
-                                            </h3>
-                                            <div class="cardsSwiper__descripcion">
-                                                <div class="row justify-content-center">
-                                                    <!-- Cronomether example -->
-                                                    <div class="cronomether" id="cronomether">0s</div>
-                                                    <!-- Cronomether example -->
-                                                    <div class="mt20">
-                                                        <div onClick="testTime.start(2)" class="btn btn--yellow btn--square">
-                                                            <i class="icon far fa-play-circle"></i>
-                                                            Play 2s
-                                                        </div>
-                                                        <div onClick="testTime.start(5)" class="btn btn--yellow btn--square">
-                                                            <i class="icon fas fa-history"></i>
-                                                            Play 5s
-                                                        </div>
-                                                        <div onClick="testTime.stop()" class="btn btn--red btn--square">
-                                                            <i class="icon far fa-stop-circle"></i>
-                                                            Stop
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- END Slide -->
-                                    <!-- New Slide -->
-                                    <div class="swiper-slide cardsSwiper__slide">
-                                        <h2 class="cardsSwiper__title">
-                                            Fora da caixa 1
-                                        </h2>
-                                        <div class="cardsSwiper__slide_content">
-                                            <h3 class="cardsSwiper__subtitle">
-                                                Compartilhem e continuem a ter ideias.
-                                            </h3>
-                                            <div class="cardsSwiper__descripcion">
-                                                <!-- Drop Zone example -->
-                                                <div class="dropzone"></div>
-                                                <!-- Drop Zone example -->
-                                                <p>
-                                                    <span class="icon icon--circle">
-                                                        <i class="fas fa-user"></i>
-                                                    </span>
-                                                    Hora de ir bem além do óbvio e praticar técnicas de pensamento lateral. Pode parecer loucura, mas faz toda a diferença para a inovação.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- END Slide -->
-                                    <!-- New Slide -->
-                                    <div class="swiper-slide cardsSwiper__slide">
-                                        <h2 class="cardsSwiper__title">
-                                            PROPOSTAS
-                                        </h2>
-                                        <div class="cardsSwiper__slide_content">
-                                            <div class="cardsSwiper__descripcion">
-                                                <form class="form form--modal">
-                                                    <p>
-                                                        <span class="icon icon--circle">
-                                                            <i class="fas fa-user"></i>
-                                                        </span>
-                                                        Hora de ir bem além do óbvio e praticar técnicas de pensamento lateral. Pode parecer loucura, mas faz toda a diferença para a inovação.
-                                                    </p>
-    
-                                                    <div class="placeholder mt10">
-                                                        <input placeholder="Digite sua resposta" required type="text">
-                                                        <label></label>
-                                                    </div>
-                                                    <div class="placeholder mt10">
-                                                        <input placeholder="Digite sua resposta" required type="text">
-                                                        <label></label>
-                                                    </div>
-                                                    <p>
-                                                        <br>
-                                                        Pode parecer loucura
-                                                    </p>
-                                                    <div class="placeholder">
-                                                        <textarea placeholder="Digite sua resposta" required rows="3"></textarea>
-                                                        <label></label>
-                                                    </div>
-    
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- END Slide -->
-                                    <!-- New Slide -->
-                                    <div class="swiper-slide cardsSwiper__slide">
-                                        <h2 class="cardsSwiper__title">
-                                            PROPOSTAS
-                                        </h2>
-                                        <div class="cardsSwiper__slide_content">
-                                            <h3 class="cardsSwiper__subtitle">
-                                                Sub title
-                                            </h3>
-                                            <div class="cardsSwiper__descripcion">
-                                                <img src="https://picsum.photos/id/1011/600/300" alt="1011">
-                                                <p>
-                                                    <span class="icon icon--circle">
-                                                        <i class="fas fa-users"></i>
-                                                    </span>
-                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- END Slide -->
-                                </div>
-                                <!-- If we need pagination -->
-                                <div class="swiper-pagination"></div>
-                            </div>
-                            <!-- END Slider Cards -->
-                        </article>
-                    </div>
-                </div>
             </div>
 
 
@@ -364,6 +213,183 @@
             </article>
         </footer>
     </main>
+    
+    
+
+    <!-- <section class="customModal" data-modal="video-1">
+        <div class="customModal__container">
+            <h2 class="customModal__title"></h2>
+            <p class="customModal__desc"></p>
+            <div id="canvas-container"><canvas id="drawZone"></canvas></div>
+        </div>
+    </section> -->
+
+    <div class="micromodal micromodal-slide" id="modal-1" aria-hidden="true">
+        <div class="micromodal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="micromodal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+
+                <header class="micromodal__header">
+                    <button class="micromodal__close" aria-label="Close modal" data-micromodal-close></button>
+                </header>
+                <main class="micromodal__content">
+                    <article class="containerFluid">
+                        <!-- Slider Cards -->
+                        <div class="swiper-container cardsSwiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- New Slide -->
+                                <div class="swiper-slide cardsSwiper__slide">
+                                    <h2 class="cardsSwiper__title">
+                                        Fora da caixa 1
+                                    </h2>
+                                    <div class="cardsSwiper__slide_content">
+                                        <h2 class="micromodal__title">
+                                            Title
+                                        </h2>
+                                        <h3 class="cardsSwiper__subtitle">
+                                            Compartilhem e continuem a ter ideias.
+                                        </h3>
+                                        <p>
+                                            Adipisci in ea nihil maiores, quam quidem.
+                                        </p>
+                                        <div class="cardsSwiper__descripcion">
+                                            <div class="row justify-content-center">
+                                                <!-- Cronomether example -->
+                                                <div class="cronomether" id="cronomether">0s</div>
+                                                <!-- Cronomether example -->
+                                                <div class="mt20">
+                                                    <div onClick="testTime.start(2)" class="btn btn--yellow btn--square">
+                                                        <i class="icon far fa-play-circle"></i>
+                                                        Play 2s
+                                                    </div>
+                                                    <div onClick="testTime.start(5)" class="btn btn--yellow btn--square">
+                                                        <i class="icon fas fa-history"></i>
+                                                        Play 5s
+                                                    </div>
+                                                    <div onClick="testTime.stop()" class="btn btn--red btn--square">
+                                                        <i class="icon far fa-stop-circle"></i>
+                                                        Stop
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END Slide -->
+                                <!-- New Slide -->
+                                <div class="swiper-slide cardsSwiper__slide">
+                                    <h2 class="cardsSwiper__title">
+                                        Fora da caixa 1
+                                    </h2>
+                                    <div class="cardsSwiper__slide_content">
+                                        <h3 class="cardsSwiper__subtitle">
+                                            Compartilhem e continuem a ter ideias.
+                                        </h3>
+                                        <div class="cardsSwiper__descripcion">
+                                            <div>
+                                                <div id="canvas-container"><canvas id="drawZone"></canvas></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END Slide -->
+                                <!-- New Slide -->
+                                <div class="swiper-slide cardsSwiper__slide">
+                                    <h2 class="cardsSwiper__title">
+                                        Fora da caixa 1
+                                    </h2>
+                                    <div class="cardsSwiper__slide_content">
+                                        <h3 class="cardsSwiper__subtitle">
+                                            Compartilhem e continuem a ter ideias.
+                                        </h3>
+                                        <div class="cardsSwiper__descripcion">
+                                            <!-- Drop Zone example -->
+                                            <div class="dropzone"></div>
+                                            <!-- Drop Zone example -->
+                                            <p>
+                                                <span class="icon icon--circle">
+                                                    <i class="fas fa-user"></i>
+                                                </span>
+                                                Hora de ir bem além do óbvio e praticar técnicas de pensamento lateral. Pode parecer loucura, mas faz toda a diferença para a inovação.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END Slide -->
+                                <!-- New Slide -->
+                                <div class="swiper-slide cardsSwiper__slide">
+                                    <h2 class="cardsSwiper__title">
+                                        PROPOSTAS
+                                    </h2>
+                                    <div class="cardsSwiper__slide_content">
+                                        <div class="cardsSwiper__descripcion">
+                                            <form class="form form--modal">
+                                                <p>
+                                                    <span class="icon icon--circle">
+                                                        <i class="fas fa-user"></i>
+                                                    </span>
+                                                    Hora de ir bem além do óbvio e praticar técnicas de pensamento lateral. Pode parecer loucura, mas faz toda a diferença para a inovação.
+                                                </p>
+
+                                                <div class="placeholder mt10">
+                                                    <input placeholder="Digite sua resposta" required type="text">
+                                                    <label></label>
+                                                </div>
+                                                <div class="placeholder mt10">
+                                                    <input placeholder="Digite sua resposta" required type="text">
+                                                    <label></label>
+                                                </div>
+                                                <p>
+                                                    <br>
+                                                    Pode parecer loucura
+                                                </p>
+                                                <div class="placeholder">
+                                                    <textarea placeholder="Digite sua resposta" required rows="3"></textarea>
+                                                    <label></label>
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END Slide -->
+                                <!-- New Slide -->
+                                <div class="swiper-slide cardsSwiper__slide">
+                                    <h2 class="cardsSwiper__title">
+                                        PROPOSTAS
+                                    </h2>
+                                    <div class="cardsSwiper__slide_content">
+                                        <h3 class="cardsSwiper__subtitle">
+                                            Sub title
+                                        </h3>
+                                        <div class="cardsSwiper__descripcion">
+                                            <img src="https://picsum.photos/id/1011/600/300" alt="1011">
+                                            <p>
+                                                <span class="icon icon--circle">
+                                                    <i class="fas fa-users"></i>
+                                                </span>
+                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END Slide -->
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <!-- END Slider Cards -->
+                    </article>
+                </main>
+                <footer class="micromodal__footer">
+                    <button class="btn btn--red btn--square" data-micromodal-close aria-label="Close this dialog window">Close</button>
+                </footer>
+            </div>
+        </div>
+    </div>
+
     <!-- ↓↓ bootstrap ↓↓ -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -377,10 +403,14 @@
     <!-- ↓↓ swiper ↓↓ -->
     <script src="library/swiper/dist/js/swiper.min.js"></script>
     <!-- ↑↑ swiper ↑↑ -->
-    
-    <!-- ↓↓ Canvas free drawing ↓↓ -->
+
+    <!-- ↓↓ swiper ↓↓ -->
     <script src="library/canvas-free-drawing/canvas-free-drawing.min.js"></script>
-    <!-- ↑↑ Canvas free drawing ↑↑ -->
+    <!-- ↑↑ swiper ↑↑ -->
+    
+    <!-- ↓↓ Micro Modal ↓↓ -->
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <!-- ↑↑ Micro Modal ↑↑ -->
 
     <script type="text/javascript">
         // ↓ run "gulp" to activate this ↓
