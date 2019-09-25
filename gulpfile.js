@@ -20,6 +20,7 @@ var paths = {
 			'sources/js/chronometer.js',
 			'sources/js/utilidades.js',
 			'sources/js/modals.js',
+			'sources/js/tinderCards.js',
 			'sources/js/front.js',
 			'sources/js/gameBoard.js',
 		],

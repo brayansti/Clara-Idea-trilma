@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded' , (e)=>{
 	toogleMenu();
 	dropZone();
+	cfdControls();
 
     document.getElementById('toggleChatEvent').addEventListener('click' , ()=>{
         !chatStatus ? openChat() : closeChat();
@@ -103,9 +104,64 @@ let testTime = new Chronometer('#cronomether' , (clock)=>{
 	// Do anythink here
 });
 
+const setCanvasWidth = (canvas)=>{
+	if(utilidadesJS.isMobile()){
+		return 299
+	}
+	else return 500
+}
+
 const cfd = new CanvasFreeDrawing.default({
 	elementId: 'drawZone',
-	width: 300,
+	width: setCanvasWidth('drawZone'),
 	height: 300,
 	showWarnings: true,
 });
+
+const cfdControls = ()=>{
+	let controls_set_yellow =document.querySelector('.canvas-container__controls_set-yellow');
+	let controls_set_red =document.querySelector('.canvas-container__controls_set-red');
+	let controls_set_blue =document.querySelector('.canvas-container__controls_set-blue');
+	let controls_set_black =document.querySelector('.canvas-container__controls_set-black');
+	let controls_set_undo =document.querySelector('.canvas-container__controls_set-undo');
+	let controls_set_redo =document.querySelector('.canvas-container__controls_set-redo');
+	let controls_set_trash =document.querySelector('.canvas-container__controls_set-trash');
+	let controls_set_save =document.querySelector('.canvas-container__controls_set-save');
+	
+	controls_set_yellow.addEventListener('click' , (e)=>{
+		cfd.setDrawingColor([230, 169, 62]);
+	});
+	controls_set_red.addEventListener('click' , (e)=>{
+		cfd.setDrawingColor([250, 61, 90]);
+	});
+	controls_set_blue.addEventListener('click' , (e)=>{
+		cfd.setDrawingColor([36, 127, 255]);
+	});
+	controls_set_black.addEventListener('click' , (e)=>{
+		cfd.setDrawingColor([0, 0, 0]);
+	});
+	controls_set_undo.addEventListener('click' , (e)=>{
+		cfd.undo();
+	});
+	controls_set_redo.addEventListener('click' , (e)=>{
+		cfd.redo();
+	});
+	controls_set_trash.addEventListener('click' , (e)=>{
+		cfd.clear();
+	});
+	controls_set_save.addEventListener('click' , (e)=>{
+		let dataImage = cfd.save();
+		// showBase64(dataImage);
+		downloadBase64(dataImage);
+	});
+	function showBase64(base64URL){
+		var win = window.open();
+		win.document.write('<iframe src="' + base64URL  + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>');
+	}
+	function downloadBase64(base64URL){
+		var download = document.createElement('a');
+		download.href = base64URL;
+		download.download = 'yourDraw.png';
+		download.click();
+	}
+}

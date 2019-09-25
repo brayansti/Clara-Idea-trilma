@@ -73,7 +73,7 @@
                 </div>
                 <!-- END Step -->
                 <!-- NEW Step -->
-                <div data-micromodal-trigger="modal-1" class="gameboard__step">
+                <div data-micromodal-trigger="modal-2" class="gameboard__step">
                     2
                 </div>
                 <!-- END Step -->
@@ -120,6 +120,36 @@
                 <!-- NEW Step -->
                 <div data-micromodal-trigger="modal-1" class="gameboard__step">
                     11
+                </div>
+                <!-- END Step -->
+                <!-- NEW Step -->
+                <div data-micromodal-trigger="modal-1" class="gameboard__step">
+                    12
+                </div>
+                <!-- END Step -->
+                <!-- NEW Step -->
+                <div data-micromodal-trigger="modal-1" class="gameboard__step">
+                    13
+                </div>
+                <!-- END Step -->
+                <!-- NEW Step -->
+                <div data-micromodal-trigger="modal-1" class="gameboard__step">
+                    14
+                </div>
+                <!-- END Step -->
+                <!-- NEW Step -->
+                <div data-micromodal-trigger="modal-1" class="gameboard__step">
+                    15
+                </div>
+                <!-- END Step -->
+                <!-- NEW Step -->
+                <div data-micromodal-trigger="modal-1" class="gameboard__step">
+                    16
+                </div>
+                <!-- END Step -->
+                <!-- NEW Step -->
+                <div data-micromodal-trigger="modal-1" class="gameboard__step">
+                    17
                 </div>
                 <!-- END Step -->
             </div>
@@ -214,23 +244,17 @@
         </footer>
     </main>
     
-    
-
-    <!-- <section class="customModal" data-modal="video-1">
-        <div class="customModal__container">
-            <h2 class="customModal__title"></h2>
-            <p class="customModal__desc"></p>
-            <div id="canvas-container"><canvas id="drawZone"></canvas></div>
-        </div>
-    </section> -->
-
+    <!-- NEW MODAL -->
     <div class="micromodal micromodal-slide" id="modal-1" aria-hidden="true">
         <div class="micromodal__overlay" tabindex="-1" data-micromodal-close>
-            <div class="micromodal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+            <div class="micromodal__container animated bounceInDown" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
 
                 <header class="micromodal__header">
-                    <button class="micromodal__close" aria-label="Close modal" data-micromodal-close></button>
+                    <button class="btn btn--circle btn--circle-big btn--yellow micromodal__close" aria-label="Close modal" data-micromodal-close>
+                        <i class="fas fa-times"></i>
+                    </button>
                 </header>
+
                 <main class="micromodal__content">
                     <article class="containerFluid">
                         <!-- Slider Cards -->
@@ -240,7 +264,7 @@
                                 <!-- New Slide -->
                                 <div class="swiper-slide cardsSwiper__slide">
                                     <h2 class="cardsSwiper__title">
-                                        Fora da caixa 1
+                                        PROPOSTAS
                                     </h2>
                                     <div class="cardsSwiper__slide_content">
                                         <h2 class="micromodal__title">
@@ -257,6 +281,8 @@
                                                 <!-- Cronomether example -->
                                                 <div class="cronomether" id="cronomether">0s</div>
                                                 <!-- Cronomether example -->
+                                            </div>
+                                            <div class="row justify-content-center">
                                                 <div class="mt20">
                                                     <div onClick="testTime.start(2)" class="btn btn--yellow btn--square">
                                                         <i class="icon far fa-play-circle"></i>
@@ -271,23 +297,6 @@
                                                         Stop
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- END Slide -->
-                                <!-- New Slide -->
-                                <div class="swiper-slide cardsSwiper__slide">
-                                    <h2 class="cardsSwiper__title">
-                                        Fora da caixa 1
-                                    </h2>
-                                    <div class="cardsSwiper__slide_content">
-                                        <h3 class="cardsSwiper__subtitle">
-                                            Compartilhem e continuem a ter ideias.
-                                        </h3>
-                                        <div class="cardsSwiper__descripcion">
-                                            <div>
-                                                <div id="canvas-container"><canvas id="drawZone"></canvas></div>
                                             </div>
                                         </div>
                                     </div>
@@ -389,6 +398,63 @@
             </div>
         </div>
     </div>
+    <!-- END MODAL -->
+    
+    <!-- NEW MODAL -->
+    <div class="micromodal micromodal-slide" id="modal-2" aria-hidden="true">
+        <div class="micromodal__overlay" tabindex="-1" data-micromodal-close>
+            <div class="micromodal__container animated bounceInDown" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+
+                <header class="micromodal__header">
+                    <button class="btn btn--circle btn--circle-big btn--yellow micromodal__close" aria-label="Close modal" data-micromodal-close>
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <h2 class="cardsSwiper__title">
+                        Fora da caixa 1
+                    </h2>
+                </header>
+
+                <main class="micromodal__content">
+                    <div class="cardsSwiper__slide_content">
+                        <article class="containerFluid">
+                            <h2 class="micromodal__title">
+                                Title
+                            </h2>
+                            <h3 class="cardsSwiper__subtitle">
+                                Compartilhem e continuem a ter ideias.
+                                Compartilhem e continuem a ter ideias.
+                            </h3>
+                            <div class="canvas-container" id="canvas-container">
+                                <canvas id="drawZone"></canvas>
+                                <div class="canvas-container__controls">
+                                    <div class="canvas-container__controls_set canvas-container__controls_set-yellow"></div>
+                                    <div class="canvas-container__controls_set canvas-container__controls_set-red"></div>
+                                    <div class="canvas-container__controls_set canvas-container__controls_set-blue"></div>
+                                    <div class="canvas-container__controls_set canvas-container__controls_set-black"></div>
+                                    <div class="canvas-container__controls_set canvas-container__controls_set-undo">
+                                        <i class="fas fa-undo"></i>
+                                    </div>
+                                    <div class="canvas-container__controls_set canvas-container__controls_set-redo">
+                                        <i class="fas fa-redo"></i>
+                                    </div>
+                                    <div class="canvas-container__controls_set canvas-container__controls_set-trash">
+                                        <i class="far fa-trash-alt"></i>
+                                    </div>
+                                    <div class="canvas-container__controls_set canvas-container__controls_set-save">
+                                        <i class="fas fa-download"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </main>
+                <footer class="micromodal__footer">
+                    <button class="btn btn--red btn--square" data-micromodal-close aria-label="Close this dialog window">Close</button>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <!-- END MODAL -->
 
     <!-- ↓↓ bootstrap ↓↓ -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
