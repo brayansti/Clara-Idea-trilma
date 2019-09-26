@@ -1,11 +1,16 @@
 document.addEventListener('DOMContentLoaded' , (e)=>{
 	toogleMenu();
 	dropZone();
-	cfdControls();
+	if( typeof(CanvasFreeDrawing) != 'undefined' ){
+		cfdControls();
+	}
 
-    document.getElementById('toggleChatEvent').addEventListener('click' , ()=>{
-        !chatStatus ? openChat() : closeChat();
-    });
+	if(document.getElementById('toggleChatEvent')){
+		document.getElementById('toggleChatEvent').addEventListener('click' , ()=>{
+			!chatStatus ? openChat() : closeChat();
+		});
+	}
+
 
     document.addEventListener('keyup' , (e)=>{
         if( e.keyCode === 27 ){
@@ -51,13 +56,16 @@ const chatScrollDown = () =>{
 const toogleMenu = ()=>{
 	const menuHamburguer = document.querySelector('.hamburger-menu');
 
-	menuHamburguer.addEventListener('click' , (e)=>{
-		document.querySelector('.hamburger-menu .bar').classList.toggle('animate');
-		document.querySelector('.mainHeader__nav').classList.toggle('hide');
-	});
+	if(menuHamburguer){
+		menuHamburguer.addEventListener('click' , (e)=>{
+			document.querySelector('.hamburger-menu .bar').classList.toggle('animate');
+			document.querySelector('.mainHeader__nav').classList.toggle('hide');
+		});
+	}
+
 }
 
-Dropzone.autoDiscover = false;
+if( typeof(Dropzone) != 'undefined' ) Dropzone.autoDiscover = false;
 const dropZone = () =>{
 	
 	var dropzoneOptions = {
@@ -111,12 +119,16 @@ const setCanvasWidth = (canvas)=>{
 	else return 500
 }
 
-const cfd = new CanvasFreeDrawing.default({
-	elementId: 'drawZone',
-	width: setCanvasWidth('drawZone'),
-	height: 300,
-	showWarnings: true,
-});
+let cfd;
+
+if( typeof(CanvasFreeDrawing) != 'undefined' ){
+	cfd = new CanvasFreeDrawing.default({
+		elementId: 'drawZone',
+		width: setCanvasWidth('drawZone'),
+		height: 300,
+		showWarnings: true,
+	});
+}
 
 const cfdControls = ()=>{
 	let controls_set_yellow =document.querySelector('.canvas-container__controls_set-yellow');

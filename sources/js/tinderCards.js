@@ -1,9 +1,5 @@
-'use strict';
-
 var tinderContainer = document.querySelector('.tinder');
 var allCards = document.querySelectorAll('.tinder--card');
-var nope = document.getElementById('nope');
-var love = document.getElementById('love');
 
 function initCards(card, index) {
 	var newCards = document.querySelectorAll('.tinder--card:not(.removed)');
@@ -90,10 +86,17 @@ function createButtonListener(love) {
 	};
 }
 
+const goBack = ()=>{
+	var cards = document.querySelectorAll('.tinder--card.removed');
+	if (cards.length > 0) {
+		var prevCard = cards[(cards.length-1)];
+		prevCard.classList.remove('removed');
+		initCards();
+	}
+	else{
+		return false
+	}
+}
+
 var nopeListener = createButtonListener(false);
 var loveListener = createButtonListener(true);
-
-nope.addEventListener('click', nopeListener);
-love.addEventListener('click', loveListener);
-
-alert();

@@ -1,24 +1,27 @@
-MicroModal.init({
-    onShow: modal => {
-        initSlider();
-        onShowModal(modal);
-    }, // [1]
-	onClose: modal => {
-        onCloseModal(modal);
-    }, // [2]
-	// openTrigger: 'data-custom-open', // [3]
-	// closeTrigger: 'data-custom-close', // [4]
-	// disableScroll: true, // [5]
-	// disableFocus: false, // [6]
-	// awaitOpenAnimation: false, // [7]
-	// awaitCloseAnimation: false, // [8]
-	debugMode: true // [9]
-});
+// Check for MicroModal
+if( typeof(MicroModal) != 'undefined' ){
+    MicroModal.init({
+        onShow: modal => {
+            initSlider();
+            onShowModal(modal);
+        }, // [1]
+        onClose: modal => {
+            onCloseModal(modal);
+        }, // [2]
+        // openTrigger: 'data-custom-open', // [3]
+        // closeTrigger: 'data-custom-close', // [4]
+        // disableScroll: true, // [5]
+        // disableFocus: false, // [6]
+        // awaitOpenAnimation: false, // [7]
+        // awaitCloseAnimation: false, // [8]
+        debugMode: true // [9]
+    });
+}
+
 
 let swiperCards = null;
 let counterModalcards = 0;
 const initSlider = ()=>{
-    console.log(swiperCards);
     let sliderOptions = {
         slidesPerView: 1,
         dynamicBullets: true,
