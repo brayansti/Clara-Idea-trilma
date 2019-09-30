@@ -98,6 +98,12 @@
         .sendMessage{
             width: 100%;
             display: flex;
+            &__btns{
+                display: flex;
+                min-width: 95px;
+                justify-content: space-between;
+                margin-left: 10px;
+            }
         }
         input{
             width: 100%;

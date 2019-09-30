@@ -1,3 +1,13 @@
+const body = document.getElementsByTagName('body')[0];
+
+window.addEventListener("load", function(event) {
+	const cardSwipe = document.querySelector('.swipeCards .swipeCards--cards');
+	if(cardSwipe){
+		cardSwipe.classList.add('animated' , 'swing');
+	}
+	hideLoader();
+});
+
 document.addEventListener('DOMContentLoaded' , (e)=>{
 	toogleMenu();
 	dropZone();
@@ -18,6 +28,10 @@ document.addEventListener('DOMContentLoaded' , (e)=>{
         }
     })
 });
+
+const hideLoader = ()=>{
+	body.classList.remove('loading');
+}
 
 const toggleChat = ()=>{
     document.querySelector('.chatbox').classList.toggle('active');

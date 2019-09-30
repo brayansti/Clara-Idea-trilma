@@ -104,9 +104,8 @@ const goBack = ()=>{
 	}
 }
 
-const theBody = document.getElementsByTagName('body')[0];
 const endSwipeCards = () => {
-	theBody.style.opacity = "0";
+	body.classList.add = 'loading';
 	setTimeout(()=>{
 		window.location.href = 'game.html';
 	} , 500)

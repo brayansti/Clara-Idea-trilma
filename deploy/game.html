@@ -12,8 +12,8 @@
         <link rel="stylesheet" href="library/swiper/dist/css/swiper.min.css">
         <link rel="stylesheet" href="assets/css/main.css">
     </head>
-<body>
 
+<body class="loading">
     
     <main class="mainContent">
         <header class="mainHeader">
@@ -141,17 +141,6 @@
                 <div data-micromodal-trigger="modal-1" class="gameboard__step">
                     15
                 </div>
-                <!-- END Step -->
-                <!-- NEW Step -->
-                <div data-micromodal-trigger="modal-1" class="gameboard__step">
-                    16
-                </div>
-                <!-- END Step -->
-                <!-- NEW Step -->
-                <div data-micromodal-trigger="modal-1" class="gameboard__step">
-                    17
-                </div>
-                <!-- END Step -->
             </div>
 
 
@@ -235,9 +224,50 @@
                 <div class="chatbox__textarea">
                     <form class="sendMessage" class="dropzone">
                         <input type="text">
-                        <button class="btn btn--yellow btn--circle">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
+                        <div class="sendMessage__btns">
+                        <!--  -->
+                        <!--  -->
+                        <nav class="stickymenu">
+                            <input type="checkbox" href="#" class="stickymenu-open" name="stickymenu-open" id="stickymenu-open"/>
+                            <label class="stickymenu-open-button" for="stickymenu-open">
+                                <span class="hamburgersticky hamburgersticky-1"></span>
+                                <span class="hamburgersticky hamburgersticky-2"></span>
+                                <span class="hamburgersticky hamburgersticky-3"></span>
+                            </label>
+
+                            <a href="#" class="stickymenu-item"> <i class="fas fa-adjust"></i> </a>
+                            <a href="#" class="stickymenu-item"> <i class="fa fa-plus"></i> </a>
+                            <a href="#" class="stickymenu-item"> <i class="fa fa-heart"></i> </a>
+                            <a href="#" class="stickymenu-item"> <i class="fa fa-envelope"></i> </a>
+                        </nav>
+
+
+                        <!-- filters -->
+                        <svg style="display:none" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                            <defs>
+                            <filter id="shadowed-goo">
+                                
+                                <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                                <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+                                <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+                                <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+                                <feComposite in2="shadow" in="goo" result="goo" />
+                                <feComposite in2="goo" in="SourceGraphic" result="mix" />
+                            </filter>
+                            <filter id="goo">
+                                <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                                <feComposite in2="goo" in="SourceGraphic" result="mix" />
+                            </filter>
+                            </defs>
+                        </svg>
+                        <!--  -->
+                        <!--  -->
+                            <button class="btn btn--yellow btn--circle">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
                     </form>
                 </div>
             </article>
