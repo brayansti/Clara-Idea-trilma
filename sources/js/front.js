@@ -11,6 +11,9 @@ window.addEventListener("load", function(event) {
 document.addEventListener('DOMContentLoaded' , (e)=>{
 	toogleMenu();
 	dropZone();
+	onChatSendMessage();
+	saveDrawModal();
+
 	if( typeof(CanvasFreeDrawing) != 'undefined' ){
 		cfdControls();
 	}
@@ -26,7 +29,17 @@ document.addEventListener('DOMContentLoaded' , (e)=>{
         if( e.keyCode === 27 ){
             closeChat();
         }
-    })
+	})
+	let menuStickyItemBtn = document.querySelectorAll('.stickymenu-item');
+	let menuStickyItemBtnClass = document.getElementsByClassName('stickymenu-item');
+	if(menuStickyItemBtn.length > 0){
+		menuStickyItemBtn.forEach(element => {
+			element.addEventListener('click' , (e)=>{
+				closeStickymenu();
+			})
+		});
+	}
+	
 });
 
 const hideLoader = ()=>{
@@ -49,7 +62,8 @@ const closeChat = () => {
     let iconChat = document.querySelectorAll('#toggleChatEvent .fas');
     iconChat[0].classList.remove('hidden');
     iconChat[1].classList.add('hidden');
-    document.querySelector('.sendMessage input').blur();
+	document.querySelector('.sendMessage input').blur();
+	closeStickymenu();
 }
 
 const openChat = () => {
@@ -63,8 +77,55 @@ const openChat = () => {
 }
 
 const chatScrollDown = () =>{
-    let chatBox = document.querySelector('.chatbox__chatContent');
-    chatBox.scrollTop = chatBox.scrollHeight
+	let chatBox = document.querySelector('.chatbox__chatContent');
+	console.log(chatBox.scrollTop);
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+const onChatSendMessage = ()=>{
+	let chatForm = document.getElementById('chatForm');
+	if(chatForm){
+		chatForm.addEventListener('submit' , (e)=>{
+			e.preventDefault();
+			let chatInput = document.getElementsByName('chatboxTextChat')[0];
+			let chatMsj = linkify(chatInput.value);
+			if(chatMsj == '') return false
+	
+			var templateMsj =
+			`
+			<!-- New Chat message -->
+			<div class="chatbox__messages_message chatbox__messages_message-own">
+				<div class="chatbox__messages_content">
+					<div class="chatbox__messages_content_picture">
+						<img src="https://picsum.photos/id/642/50/50" alt="Profile">
+					</div>
+					<div class="chatbox__messages_content_text">
+						<p>${chatMsj}</p>
+						<img src="https://picsum.photos/300/180" />
+					</div>
+				</div>
+			</div>
+			<!-- END Chat message -->
+			`;
+	
+			let elementToAddCmsj = document.querySelector('.chatbox__session:last-of-type .chatbox__messages .chatbox__messages_message:last-of-type');
+	
+			elementToAddCmsj.insertAdjacentHTML('beforeend' , templateMsj);
+			chatInput.value = '';
+			chatInput.focus();
+			chatScrollDown();
+		})
+	}
+}
+
+const chatNewMessage = (message) =>{
+}
+
+const linkify = (text) => {
+    var urlRegex =/(https?:\/\/[^\s]+)/g;
+    return text.replace(urlRegex, function(url) {
+        return '<a target="_blank" href="' + url + '">' + url + '</a>';
+    });
 }
 
 const toogleMenu = ()=>{
@@ -76,13 +137,29 @@ const toogleMenu = ()=>{
 			document.querySelector('.mainHeader__nav').classList.toggle('hide');
 		});
 	}
+}
 
+const saveDrawModal = ()=>{
+	let btnSaveDrawModal = document.querySelector('#btnSaveDrawModal');
+	if(btnSaveDrawModal){
+		btnSaveDrawModal.addEventListener('click' , (e)=>{
+			let theDraw = cfd.save();
+			
+		})
+	}
+}
+
+const closeStickymenu = ()=>{
+	let menuBtn = document.getElementById('stickymenu-open');
+	if(menuBtn){
+		menuBtn.checked = false;
+	}
 }
 
 if( typeof(Dropzone) != 'undefined' ) Dropzone.autoDiscover = false;
 const dropZone = () =>{
 	
-	var dropzoneOptions = {
+	let dropzoneOptions = {
 		url: "index.html",
 		dictDefaultMessage: `
 			<div>
@@ -181,11 +258,11 @@ const cfdControls = ()=>{
 		downloadBase64(dataImage);
 	});
 	function showBase64(base64URL){
-		var win = window.open();
+		let win = window.open();
 		win.document.write('<iframe src="' + base64URL  + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>');
 	}
 	function downloadBase64(base64URL){
-		var download = document.createElement('a');
+		let download = document.createElement('a');
 		download.href = base64URL;
 		download.download = 'yourDraw.png';
 		download.click();

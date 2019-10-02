@@ -18,7 +18,7 @@ $opening-angle:$pi*2;
 	// top:20px;
 	color:white;
 	text-align:center;
-	line-height:45px;
+	line-height:42px;
 	transform:translate3d(0,0,0);
 	transition:transform ease-out 200ms;
 }
@@ -43,6 +43,11 @@ $opening-angle:$pi*2;
 	transition:transform 200ms;
 }
 $hamburgersticky-spacing:6px;
+.hamburgersticky-1,
+	.hamburgersticky-2,
+	.hamburgersticky-3{
+		display: none;
+	}
 .hamburgersticky-1{
 	transform:translate3d(0,-$hamburgersticky-spacing,0);
 }
@@ -53,6 +58,14 @@ $hamburgersticky-spacing:6px;
 	transform:translate3d(0,$hamburgersticky-spacing,0);
 }
 .stickymenu-open:checked+.stickymenu-open-button{
+	i{
+		display: none;
+	}
+	.hamburgersticky-1,
+	.hamburgersticky-2,
+	.hamburgersticky-3{
+		display: block;
+	}
 	.hamburgersticky-1{
 		transform:translate3d(0,0,0) rotate(45deg); 
 	}
