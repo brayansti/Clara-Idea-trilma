@@ -90,35 +90,36 @@ const onChatSendMessage = ()=>{
 			let chatInput = document.getElementsByName('chatboxTextChat')[0];
 			let chatMsj = linkify(chatInput.value);
 			if(chatMsj == '') return false
-	
-			var templateMsj =
-			`
-			<!-- New Chat message -->
-			<div class="chatbox__messages_message chatbox__messages_message-own">
-				<div class="chatbox__messages_content">
-					<div class="chatbox__messages_content_picture">
-						<img src="https://picsum.photos/id/642/50/50" alt="Profile">
-					</div>
-					<div class="chatbox__messages_content_text">
-						<p>${chatMsj}</p>
-						<img src="https://picsum.photos/300/180" />
-					</div>
-				</div>
-			</div>
-			<!-- END Chat message -->
-			`;
-	
-			let elementToAddCmsj = document.querySelector('.chatbox__session:last-of-type .chatbox__messages .chatbox__messages_message:last-of-type');
-	
-			elementToAddCmsj.insertAdjacentHTML('beforeend' , templateMsj);
-			chatInput.value = '';
-			chatInput.focus();
-			chatScrollDown();
+			chatNewMessage( `<p class="mb0">${chatMsj}</p>`);
 		})
 	}
 }
 
 const chatNewMessage = (message) =>{
+	let chatInput = document.getElementsByName('chatboxTextChat')[0];
+	var templateMsj =
+	`
+	<!-- New Chat message -->
+	<div class="chatbox__messages_message chatbox__messages_message-own">
+		<div class="chatbox__messages_content">
+			<div class="chatbox__messages_content_picture">
+				<img src="https://picsum.photos/id/642/50/50" alt="Profile">
+			</div>
+			<div class="chatbox__messages_content_text">
+				${message}
+			</div>
+		</div>
+	</div>
+	<!-- END Chat message -->
+	`;
+
+	let elementToAddCmsj = document.querySelector('.chatbox__session:last-of-type .chatbox__messages .chatbox__messages_message:last-of-type');
+
+	elementToAddCmsj.insertAdjacentHTML('beforeend' , templateMsj);
+	chatInput.value = '';
+	chatInput.focus();
+	setTimeout( ()=>{chatScrollDown()} , 200 )
+
 }
 
 const linkify = (text) => {
@@ -144,7 +145,18 @@ const saveDrawModal = ()=>{
 	if(btnSaveDrawModal){
 		btnSaveDrawModal.addEventListener('click' , (e)=>{
 			let theDraw = cfd.save();
-			
+			let chatInput = document.getElementsByName('chatboxTextChat')[0];
+			let chatMsj = linkify(chatInput.value);
+			if(chatMsj == '') {
+				chatNewMessage(`<img src="${theDraw}" alt="Draw">`);
+			}
+			else{
+				chatNewMessage(`
+					<p>${chatMsj}</p>
+					<img src="${theDraw}" alt="Draw">
+				`);
+			}
+			cfd.clear();
 		})
 	}
 }
