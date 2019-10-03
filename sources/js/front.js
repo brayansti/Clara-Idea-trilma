@@ -3,7 +3,10 @@ const body = document.getElementsByTagName('body')[0];
 window.addEventListener("load", function(event) {
 	const cardSwipe = document.querySelector('.swipeCards .swipeCards--cards');
 	if(cardSwipe){
-		cardSwipe.classList.add('animated' , 'swing');
+		setTimeout(()=>{
+			cardSwipe.classList.add('animated' , 'swing');
+			
+		} , 500)
 	}
 	hideLoader();
 });

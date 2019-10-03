@@ -140,3 +140,9 @@
 		}
 	}
 }
+
+// Call animation
+@mixin trilhaGradient() {
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1232b1+0,e81ea4+100 */
+	background: linear-gradient(135deg, #1232b1 0%,#e81ea4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}

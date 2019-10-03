@@ -126,24 +126,28 @@ function lovenext(e) {
 
 // var swipe_nope = document.getElementById('nope');
 // var swipe_love = document.getElementById('love');
-var swipe_back = document.getElementById('back');
-var swipe_next = document.getElementById('next');
-var swipe_question = document.querySelectorAll('.cardCuestions__cuestion');
+let swipe_back = document.querySelectorAll('[swipe-control="back"]');
+let swipe_next = document.querySelectorAll('[swipe-control="next"]');
+let swipe_question = document.querySelectorAll('.cardCuestions__cuestion');
 
 
 if(swipeCardsContainer){
 	// swipe_nope.addEventListener('click', nopeListener);
 	// swipe_love.addEventListener('click', loveListener);
 	// swipe_next.addEventListener('click', (e)=>lovenext(e) );
-	swipe_back.addEventListener('click', goBack);
-	swipe_next.addEventListener('click', loveListener);
 
-	// swipe_question.forEach(element => {
-	// 	element.classList.remove('active');
-	// 	element.addEventListener('click' , (e)=>{
-	// 		swipe_question
-	// 	})
-	// });
+	swipe_next.forEach(element => {
+		element.addEventListener('click' , loveListener)
+	});
+	swipe_back.forEach(element => {
+		element.addEventListener('click' , goBack)
+	});
+
+	// swipe_next[0].addEventListener('click', loveListener);
+
+	
+
+	
 
 	for (let index = 0; index < swipe_question.length; index++) {
 		const element = swipe_question[index];
@@ -151,7 +155,9 @@ if(swipeCardsContainer){
 			swipe_question.forEach(element => { element.classList.remove('active'); });
 			element.classList.add('active');
 			setTimeout(() => {
-				swipe_next.click();
+				// swipe_next.click();
+				// loveListener()
+				lovenext(e);
 			}, 300);
 		})
 	}
