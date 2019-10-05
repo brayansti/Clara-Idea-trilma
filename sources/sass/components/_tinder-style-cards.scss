@@ -78,6 +78,12 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		p{
+			margin-bottom: 0;
+			@media #{$mediaMobile}{
+				font-size: 0.9rem;
+			}
+		}
 	}
 	&__image{
 		width: 100%;
@@ -101,6 +107,7 @@
 .swipeCards{
 	&--card{
 		&-welcome{
+			color: $white;
 			display: flex;
 			align-items: center;
 			justify-content: center;
