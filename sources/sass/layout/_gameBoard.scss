@@ -1,4 +1,4 @@
-// Settings:
+// Settings
 $card-width : 200px;
 $card-height : 200px;
 $colums-gap: 20px; // auto-fill;
@@ -50,47 +50,6 @@ $way-width: 40px;
                 height: calc(100% + #{ ($colums-gap + (($card-height - $way-width)/2) + $way-width) - (($card-height - $way-width)/2) });
             }
         }
-
-        // NNNNNNNNNNNNNNNNNN
-        // NNNNNNNNNNNNNNNNNN
-        // NNNNNNNNNNNNNNNNNN
-
-        // // ↓↓↓ last and firsf of row ↓↓↓
-
-        // &:nth-of-type( #{($colums-grid)*2}n - #{$colums-grid} ),
-        // &:nth-of-type( #{($colums-grid)*2}n - #{$colums-grid - 1} ){
-        //     &::after{
-        //         z-index: -1;
-        //         content: "";
-        //         width: $way-width;
-        //         position: absolute;
-        //         background-color: #e6a93e;                
-        //         top: ($card-height - $way-width)/2;
-        //         height: calc(100% + #{ ($colums-gap + (($card-height - $way-width)/2) + $way-width) - (($card-height - $way-width)/2) });
-        //     }
-        // }
-
-        // // ↓↓↓ last of row ↓↓↓
-        // &:nth-of-type( #{($colums-grid)*2}n - #{$colums-grid} ){
-        //     background-color: purple;
-        //     &::after{
-        //         border-radius: 0 40px 40px 0;
-        //         left: calc(100% + #{$colums-gap});
-        //     }
-        // }
-
-        // // ↓↓↓ First of row ↓↓↓ 
-        // &:nth-of-type( #{($colums-grid)*2}n - #{$colums-grid - 1} ){
-        //     background-color: tomato;
-        //     &::after{
-        //         border-radius: 40px 0 0 40px;
-        //         right: calc(100% + #{$colums-gap});
-        //     }
-        // }
-
-        // NNNNNNNNNNNNNNNNNN
-        // NNNNNNNNNNNNNNNNNN
-        // NNNNNNNNNNNNNNNNNN
         &:last-of-type{
             &::after{
                 // content: none;
