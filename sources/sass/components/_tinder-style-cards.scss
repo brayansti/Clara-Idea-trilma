@@ -80,8 +80,9 @@
 		justify-content: space-between;
 		p{
 			margin-bottom: 0;
+			font-size: 0.9rem;
 			@media #{$mediaMobile}{
-				font-size: 0.9rem;
+				// font-size: 0.9rem;
 			}
 		}
 	}
@@ -110,7 +111,7 @@
 			color: $white;
 			display: flex;
 			align-items: center;
-			justify-content: center;
+			justify-content: space-around;
 			@include trilhaGradient();
 			>div{
 				width: 100%;
