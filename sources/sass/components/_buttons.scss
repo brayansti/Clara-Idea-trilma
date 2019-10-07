@@ -46,6 +46,15 @@ label.btn {
 			background: #d0354d;
 		}
 	}
+	&--gradient {
+		border: none;
+		color: $white;
+		@include trilhaGradient;
+		border-color: transparent;
+		&:hover {
+			transform: scale(1.08);
+		}
+	}
 	&--green {
 		color: $white;
 		background: #1cd46e;
