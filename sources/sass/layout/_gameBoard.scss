@@ -47,7 +47,7 @@ $way-width: 40px;
                 position: absolute;
                 background-color: #e6a93e;
                 top: ($card-height - $way-width)/2;
-                height: calc(100% + #{ ($colums-gap + (($card-height - $way-width)/2) + $way-width) - (($card-height - $way-width)/2) });
+                // height: calc(100% + #{ ($colums-gap + (($card-height - $way-width)/2) + $way-width) - (($card-height - $way-width)/2) });
             }
         }
         // &:last-of-type{
