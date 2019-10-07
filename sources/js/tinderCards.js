@@ -145,20 +145,23 @@ if(swipeCardsContainer){
 
 	// swipe_next[0].addEventListener('click', loveListener);
 
-	
+	const cardCuestions =  document.querySelectorAll('.cardCuestions');
+	for (let index = 0; index < cardCuestions.length; index++) {
+		const cardCuestion = cardCuestions[index];
+		const singleCuestion = cardCuestion.querySelectorAll('.cardCuestions__cuestion');
 
-	
+		for (let indexCuestions = 0; indexCuestions < singleCuestion.length; indexCuestions++) {
+			const element = singleCuestion[indexCuestions];
 
-	for (let index = 0; index < swipe_question.length; index++) {
-		const element = swipe_question[index];
-		element.addEventListener('click' , (e)=>{
-			swipe_question.forEach(element => { element.classList.remove('active'); });
-			element.classList.add('active');
-			setTimeout(() => {
-				// swipe_next.click();
-				// loveListener()
-				lovenext(e);
-			}, 300);
-		})
+			element.addEventListener('click' , (e)=>{
+				singleCuestion.forEach(element => { element.classList.remove('active'); });
+				element.classList.add('active');
+				setTimeout(() => {
+					lovenext(e);
+				}, 300);
+			})
+		}
+
 	}
+
 }
