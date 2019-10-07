@@ -1,7 +1,7 @@
-// Settings
+// Settings:
 $card-width : 200px;
 $card-height : 200px;
-$colums-gap: 20px;
+$colums-gap: 20px; // auto-fill;
 $way-width: 40px;
 
 .gameboard{
@@ -50,11 +50,11 @@ $way-width: 40px;
                 height: calc(100% + #{ ($colums-gap + (($card-height - $way-width)/2) + $way-width) - (($card-height - $way-width)/2) });
             }
         }
-        // &:last-of-type{
-        //     &::after{
-        //         // content: none;
-        //     }
-        // }
+        &:last-of-type{
+            &::after{
+                // content: none;
+            }
+        }
     }
     &__steps{
         width: 100%;
