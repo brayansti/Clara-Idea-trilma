@@ -12,11 +12,16 @@ $way-width: 40px;
         justify-content: center;
     }
     &__step{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         border-radius: 50%;
         cursor: pointer;
         width: $card-width;
         position: relative;
         height: $card-height;
+        @include fontSize(14);
         background-color: #0231b8;
         box-shadow: 0px 0px 0px 3px #2ec7c5;
         &::before{

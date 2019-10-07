@@ -1,3 +1,11 @@
+/*!
+ * Desarrollo y maquetacion por Brayan Camargo https://brayansti.github.io
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2019 Brayan Camargo
+ */
+
+
 const body = document.getElementsByTagName('body')[0];
 
 window.addEventListener("load", function(event) {

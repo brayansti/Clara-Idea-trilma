@@ -1,3 +1,10 @@
+/*!
+ * Desarrollo y maquetacion por Brayan Camargo https://brayansti.github.io
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2019 Brayan Camargo
+ */
+
 var swipeCardsContainer = document.querySelector('.swipeCards');
 var allCards = document.querySelectorAll('.swipeCards--card');
 

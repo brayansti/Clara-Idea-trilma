@@ -1,3 +1,11 @@
+/*!
+ * Desarrollo y maquetacion por Brayan Camargo https://brayansti.github.io
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2019 Brayan Camargo
+ */
+
+
 // Check for MicroModal
 if( typeof(MicroModal) != 'undefined' ){
     MicroModal.init({
