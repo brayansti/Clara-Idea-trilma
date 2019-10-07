@@ -1,11 +1,11 @@
 // Settings
 $card-width : 200px;
 $card-height : 200px;
-$colums-gap: 20px; // auto-fill;
+$colums-gap: 20px;
 $way-width: 40px;
 
 .gameboard{
-    // --colums-grid: 4;
+    --colums-grid: 4;
     padding: 20px;
     &__column{
         display: flex;
@@ -50,11 +50,11 @@ $way-width: 40px;
                 height: calc(100% + #{ ($colums-gap + (($card-height - $way-width)/2) + $way-width) - (($card-height - $way-width)/2) });
             }
         }
-        &:last-of-type{
-            &::after{
-                // content: none;
-            }
-        }
+        // &:last-of-type{
+        //     &::after{
+        //         // content: none;
+        //     }
+        // }
     }
     &__steps{
         width: 100%;
