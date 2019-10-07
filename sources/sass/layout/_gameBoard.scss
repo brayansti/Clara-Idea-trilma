@@ -4,104 +4,104 @@ $card-height : 200px;
 $colums-gap: 20px;
 $way-width: 40px;
 
-.gameboard{
-    --colums-grid: 4;
-    padding: 20px;
-    &__column{
-        display: flex;
-        justify-content: center;
-    }
-    // &__step{
-    //     text-align: center;
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-    //     border-radius: 50%;
-    //     cursor: pointer;
-    //     width: $card-width;
-    //     position: relative;
-    //     height: $card-height;
-    //     @include fontSize(14);
-    //     background-color: #0231b8;
-    //     box-shadow: 0px 0px 0px 3px #2ec7c5;
-    //     &::before{
-    //         content: "";
-    //         left: -$colums-gap;
-    //         top: 0;
-    //         bottom: 0;
-    //         height: $way-width;
-    //         margin-top: auto;
-    //         position: absolute;
-    //         margin-bottom: auto;
-    //         width: calc(100% + #{$colums-gap + $colums-gap});
-    //         background-color: #e6a93e;
-    //         z-index: -1;
-    //     }
+// .gameboard{
+//     --colums-grid: 4;
+//     padding: 20px;
+//     &__column{
+//         display: flex;
+//         justify-content: center;
+//     }
+//     &__step{
+//         text-align: center;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         border-radius: 50%;
+//         cursor: pointer;
+//         width: $card-width;
+//         position: relative;
+//         height: $card-height;
+//         @include fontSize(14);
+//         background-color: #0231b8;
+//         box-shadow: 0px 0px 0px 3px #2ec7c5;
+//         &::before{
+//             content: "";
+//             left: -$colums-gap;
+//             top: 0;
+//             bottom: 0;
+//             height: $way-width;
+//             margin-top: auto;
+//             position: absolute;
+//             margin-bottom: auto;
+//             width: calc(100% + #{$colums-gap + $colums-gap});
+//             background-color: #e6a93e;
+//             z-index: -1;
+//         }
 
-    //     // // ↓↓↓ last of row ↓↓↓
-    //     &:last-of-type{
-    //         &::after{
-    //             z-index: -1;
-    //             content: "";
-    //             width: $way-width;
-    //             position: absolute;
-    //             background-color: #e6a93e;
-    //             top: ($card-height - $way-width)/2;
-    //             height: calc(100% + #{ ($colums-gap + (($card-height - $way-width)/2) + $way-width) - (($card-height - $way-width)/2) });
-    //         }
-    //     }
-    //     // &:last-of-type{
-    //     //     &::after{
-    //     //         // content: none;
-    //     //     }
-    //     // }
-    // }
-    &__steps{
-        width: 100%;
-        margin: 0 auto;
-        max-width: 980px;
-        &_row{
-            display: grid;
-            grid-gap: $colums-gap;
-            justify-content: center;
-            margin-bottom: $colums-gap;
-            grid-template-columns: repeat( var(--colums-grid), minmax($card-width, $card-height));
+//         // // ↓↓↓ last of row ↓↓↓
+//         &:last-of-type{
+//             &::after{
+//                 z-index: -1;
+//                 content: "";
+//                 width: $way-width;
+//                 position: absolute;
+//                 background-color: #e6a93e;
+//                 top: ($card-height - $way-width)/2;
+//                 height: calc(100% + #{ ($colums-gap + (($card-height - $way-width)/2) + $way-width) - (($card-height - $way-width)/2) });
+//             }
+//         }
+//         // &:last-of-type{
+//         //     &::after{
+//         //         // content: none;
+//         //     }
+//         // }
+//     }
+//     &__steps{
+//         width: 100%;
+//         margin: 0 auto;
+//         max-width: 980px;
+//         &_row{
+//             display: grid;
+//             grid-gap: $colums-gap;
+//             justify-content: center;
+//             margin-bottom: $colums-gap;
+//             grid-template-columns: repeat( var(--colums-grid), minmax($card-width, $card-height));
 
-            &:nth-of-type(odd){
-                // background-color: red;
-                .gameboard__step{
-                    &:last-of-type{
-                        &::after{
-                            border-radius: 0 40px 40px 0;
-                            left: calc(100% + #{$colums-gap});
-                        }
-                    }
-                }
-            }
-            &:nth-of-type(even){
-                direction: rtl;
-                .gameboard__step{
-                    &:last-of-type{
-                        &::after{
-                            border-radius: 40px 0 0 40px;
-                            right: calc(100% + #{$colums-gap});
-                        }
-                    }
-                }
-            }
-            &:last-of-type{
-                .gameboard__step{
-                    &:last-of-type{
-                        &::after{
-                            display: none;;
-                        }
-                    }
-                }
-            }
+//             &:nth-of-type(odd){
+//                 // background-color: red;
+//                 .gameboard__step{
+//                     &:last-of-type{
+//                         &::after{
+//                             border-radius: 0 40px 40px 0;
+//                             left: calc(100% + #{$colums-gap});
+//                         }
+//                     }
+//                 }
+//             }
+//             &:nth-of-type(even){
+//                 direction: rtl;
+//                 .gameboard__step{
+//                     &:last-of-type{
+//                         &::after{
+//                             border-radius: 40px 0 0 40px;
+//                             right: calc(100% + #{$colums-gap});
+//                         }
+//                     }
+//                 }
+//             }
+//             &:last-of-type{
+//                 .gameboard__step{
+//                     &:last-of-type{
+//                         &::after{
+//                             display: none;;
+//                         }
+//                     }
+//                 }
+//             }
             
-        }
-    }
-}
+//         }
+//     }
+// }
 .cardsSwiper{
     color: $black;
     &__slide{
