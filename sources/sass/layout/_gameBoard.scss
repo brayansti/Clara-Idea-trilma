@@ -47,7 +47,7 @@ $way-width: 40px;
                 position: absolute;
                 background-color: #e6a93e;
                 top: ($card-height - $way-width)/2;
-                // height: calc(100% + #{ ($colums-gap + (($card-height - $way-width)/2) + $way-width) - (($card-height - $way-width)/2) });
+                height: calc(100% + #{ ($colums-gap + (($card-height - $way-width)/2) + $way-width) - (($card-height - $way-width)/2) });
             }
         }
         // &:last-of-type{
@@ -56,51 +56,51 @@ $way-width: 40px;
         //     }
         // }
     }
-    &__steps{
-        width: 100%;
-        margin: 0 auto;
-        max-width: 980px;
-        &_row{
-            display: grid;
-            grid-gap: $colums-gap;
-            justify-content: center;
-            margin-bottom: $colums-gap;
-            grid-template-columns: repeat( var(--colums-grid), minmax($card-width, $card-height));
+    // &__steps{
+    //     width: 100%;
+    //     margin: 0 auto;
+    //     max-width: 980px;
+    //     &_row{
+    //         display: grid;
+    //         grid-gap: $colums-gap;
+    //         justify-content: center;
+    //         margin-bottom: $colums-gap;
+    //         grid-template-columns: repeat( var(--colums-grid), minmax($card-width, $card-height));
 
-            &:nth-of-type(odd){
-                // background-color: red;
-                .gameboard__step{
-                    &:last-of-type{
-                        &::after{
-                            border-radius: 0 40px 40px 0;
-                            left: calc(100% + #{$colums-gap});
-                        }
-                    }
-                }
-            }
-            &:nth-of-type(even){
-                direction: rtl;
-                .gameboard__step{
-                    &:last-of-type{
-                        &::after{
-                            border-radius: 40px 0 0 40px;
-                            right: calc(100% + #{$colums-gap});
-                        }
-                    }
-                }
-            }
-            &:last-of-type{
-                .gameboard__step{
-                    &:last-of-type{
-                        &::after{
-                            display: none;;
-                        }
-                    }
-                }
-            }
+    //         &:nth-of-type(odd){
+    //             // background-color: red;
+    //             .gameboard__step{
+    //                 &:last-of-type{
+    //                     &::after{
+    //                         border-radius: 0 40px 40px 0;
+    //                         left: calc(100% + #{$colums-gap});
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //         &:nth-of-type(even){
+    //             direction: rtl;
+    //             .gameboard__step{
+    //                 &:last-of-type{
+    //                     &::after{
+    //                         border-radius: 40px 0 0 40px;
+    //                         right: calc(100% + #{$colums-gap});
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //         &:last-of-type{
+    //             .gameboard__step{
+    //                 &:last-of-type{
+    //                     &::after{
+    //                         display: none;;
+    //                     }
+    //                 }
+    //             }
+    //         }
             
-        }
-    }
+    //     }
+    // }
 }
 .cardsSwiper{
     color: $black;
