@@ -4,11 +4,15 @@
     width: 100%;
     position: fixed;
     &__toggleChat{
-        padding: 20px;
         display: flex;
         justify-content: flex-end;
+    }
+    #toggleChatEvent{
+        position: absolute;
+        right: 10px;
+        top: calc(0% - 80px);
         @media #{$mediaMobile}{
-            padding: 10px;
+            top: calc(0% - 70px);
         }
     }
 }
