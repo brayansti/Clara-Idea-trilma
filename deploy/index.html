@@ -7,10 +7,11 @@
         <title>TRILHA CLARA</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+        <link rel="stylesheet" href="library/dropzone/dropzone.min.css">
         <link rel="stylesheet" href="assets/css/main.css">
 	</head>
 	<body class="loading">
-        <main class="mainContent">
+        <main class="">
             <header class="mainHeader">
                 <article class="container-fluid">
                     <div class="row">
@@ -82,16 +83,43 @@
                                         PARABÉNS
                                     </h2>
                                     <div class="placeholder mt5">
-                                        <input type="text" required>
+                                        <input type="text" placeholder="Digite aqui" required>
                                         <label></label>
                                     </div>
                                     <div class="placeholder mt5">
-                                        <textarea required></textarea>
+                                        <textarea placeholder="Digite aqui" required></textarea>
                                         <label></label>
                                     </div>
-                                    <p class="mt10">
-                                        Você concluiu sua jornada pelo universo da inovação. No caminho, você conheceu conceitos importantes, explorou diferentes rotas para converter ideias em inovação e ampliou seu entendimento sobre os impactos da inovação sobre as organizações, os países e a sociedade. MUITO BEM! Agora, é hora de praticar!
-                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cards Buttons -->
+                        <div class="swipeCards--buttons">
+                            <button class="btn btn--circle btn--red" swipe-control="back" id="back">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="btn btn--circle btn--red" swipe-control="next" id="next">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- END New Card -->
+
+                    
+                    <!-- New Card -->
+                    <div class="swipeCards--card">
+                        <!-- Cards container -->
+                        <div class="swipeCards--card__content">
+                            <div class="swipeCards--card__image">
+                                <img src="img/cards/parabens.png" alt="parabens">
+                            </div>
+                            <div class="pt15 pr15 pb15 pl15">
+                                <div class="form">
+                                    <div>
+                                        <!-- Drop Zone example -->
+                                        <div class="dropzone"></div>
+                                        <!-- Drop Zone example -->
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1017,7 +1045,17 @@
             <!--  -->
         </main>
 
+        <!-- ↓↓ Drop Zone ↓↓ -->
+        <script src="library/dropzone/dropzone.js"></script>
+        <!-- ↑↑ Drop Zone ↑↑ -->
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+
+        <script type="text/javascript">
+            // ↓ run "gulp" to activate this ↓
+            if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent))
+                document.write('<script src="./assets/js/ie.min.js"><\/script>');
+        </script>
         <script src="assets/js/main.js"></script>
 
 	</body>

@@ -215,7 +215,7 @@ const dropZone = () =>{
 	selectDropzones.forEach(element => {
 		// let idDropzone = element.id;
 		// let newDropzone = new Dropzone("#"+idDropzone, dropzoneOptions );
-		let newDropzone = new Dropzone(element, dropzoneOptions );
+		newDropzone = new Dropzone(element, dropzoneOptions );
 	});
 }
 
