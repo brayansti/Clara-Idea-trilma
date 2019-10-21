@@ -253,6 +253,7 @@ const cfdControls = ()=>{
 	let controls_set_redo =document.querySelector('.canvas-container__controls_set-redo');
 	let controls_set_trash =document.querySelector('.canvas-container__controls_set-trash');
 	let controls_set_save =document.querySelector('.canvas-container__controls_set-save');
+	let controls_set_pdf =document.querySelector('.canvas-container__controls_set-pdf');
 	
 	controls_set_yellow.addEventListener('click' , (e)=>{
 		cfd.setDrawingColor([230, 169, 62]);
@@ -280,9 +281,34 @@ const cfdControls = ()=>{
 		// showBase64(dataImage);
 		downloadBase64(dataImage);
 	});
+	controls_set_pdf.addEventListener('click' , (e)=>{
+		createPDF();
+	});
 	function showBase64(base64URL){
 		let win = window.open();
 		win.document.write('<iframe src="' + base64URL  + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>');
+	}
+	function createPDF(){ 
+		console.log('Buena');
+		let pdf;
+		let __CANVAS = document.getElementById('drawZone');
+		// let width = __CANVAS.width; 
+		// let height = __CANVAS.height;
+		let width = 612;
+		let height = 792;
+	
+		//set the orientation
+		if(width > height){
+		  pdf = new jsPDF('l', 'px', [width, height]);
+		}
+		else{
+		  pdf = new jsPDF('p', 'px', [height, width]);
+		}
+		//then we get the dimensions from the 'pdf' file itself
+		width = pdf.internal.pageSize.getWidth();
+		height = pdf.internal.pageSize.getHeight();
+		pdf.addImage(__CANVAS, 'PNG', 0, 0,width,height);
+		pdf.save("download.pdf");
 	}
 	function downloadBase64(base64URL){
 		let download = document.createElement('a');
